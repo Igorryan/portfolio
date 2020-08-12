@@ -22,7 +22,7 @@ const Sidebar: React.FC = () => {
         Igor Ryan.
       </Title>
         <Description>
-          I’m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at <span>Algolia</span>. I mostly do front-end development, and I’m a <span>Vue.js</span> and CSS nerd. I can't shut up about test-driven development and utility-first CSS. I also share what I learn on my blog <span>frontstuff.io</span>, or at meetups and conferences.
+        I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" target="_blank">Institute of the technology</a> and work as a freelance developer mainly in front-ends. I'm a CSS nerd, <a href="https://pt-br.reactjs.org/" target="_blank">React.js</a> and <a href="https://reactnative.dev/" target="_blank">React Native</a>. I also venture into the user interface design.
       </Description>
 
         <SkillsContainer>

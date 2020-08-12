@@ -24,7 +24,7 @@ export const Description = styled.p`
   line-height: 28px;
   color: #949495;
 
-  span {
+  a {
     color: #fff;
     text-decoration: underline;
   }

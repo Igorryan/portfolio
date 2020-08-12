@@ -19,6 +19,29 @@ interface IProject {
 const projects: IProject[] = [
   {
     id: 1,
+    title: 'Net Promoter Score (NPS)',
+    uptitle: 'IGTI',
+    local: 'Belo Horizonte ─ Brazil',
+    date: 'Jul 14, 2020',
+    tags: [
+      'API'
+    ],
+    about: 'Preparar um resumo para apresentar aqui.'
+  },
+  {
+    id: 2,
+    title: 'University Compartments',
+    uptitle: 'PUC MINAS',
+    local: 'Belo Horizonte ─ Brazil',
+    date: 'Feb 11, 2019',
+    tags: [
+      'Javascript',
+      'Firebase',
+    ],
+    about: 'I developed to assist and optimize the management of the compartments made available to students. Besides being my first published project.'
+  },
+  {
+    id: 3,
     title: 'E-commerce integration',
     uptitle: 'Freelancer',
     local: 'Santa Catarina ─ Brazil',
@@ -29,34 +52,10 @@ const projects: IProject[] = [
     about: 'Preparar um resumo para apresentar aqui.'
   },
   {
-    id: 2,
-    title: 'Net Promoter Score',
-    uptitle: 'IGTI',
-    local: 'Belo Horizonte ─ Brazil',
-    date: 'Jul 14, 2020',
-    tags: [
-      'API'
-    ],
-    about: 'Preparar um resumo para apresentar aqui.'
-  },
-  {
-    id: 3,
-    title: 'GoStack Projects Developed',
-    uptitle: 'Rocketseat',
-    local: 'Santa Catarina ─ Brazil',
-    date: 'Jul 25, 2020',
-    tags: [
-      'Backend',
-      'Web',
-      'Mobile'
-    ],
-    about: 'Preparar um resumo para apresentar aqui.'
-  },
-  {
     id: 4,
-    title: 'Application Clones',
+    title: 'Study Projects and Apps',
     uptitle: 'Developments',
-    local: 'Santa Catarina ─ Brazil',
+    local: 'Belo Horizonte ─ Brazil',
     date: 'Last in Jun 13, 2020',
     tags: [
       'Web',
@@ -64,6 +63,7 @@ const projects: IProject[] = [
     ],
     about: 'Preparar um resumo para apresentar aqui.'
   },
+
 ]
 
 
@@ -94,6 +94,8 @@ const Projectsmin: React.FC = () => {
         >
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
             opacity: focus === id && projectSelected || noProjectsSelected ? 1 : 0.7,
+            marginTop: id % 2 === 0 ? 25 : 0,
+            marginBottom: id % 2 === 0 ? -16 : 0,
           }}>
             <UpTitle>{uptitle.toUpperCase()}</UpTitle>
             <Local>{local}</Local>

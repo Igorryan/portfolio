@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
 
 `;
 
-export const Project = styled.div`
+export const Project = styled.article`
   height: 200px;
   margin: 0 8px 8px 8px;
   background: #202022;
@@ -12,6 +12,19 @@ export const Project = styled.div`
   overflow: hidden;
   cursor: pointer;
   transition: 0.1s;
+`
+
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  span {
+    color:rgb(148, 148, 149);
+    line-height: 20.8px;
+    font-size: 12px;
+  }
 `
 
 export const Title = styled.h1`
@@ -36,30 +49,9 @@ export const TagsContainer = styled.div`
 export const Tag = styled.div`
   font-size: 12px;
   line-height: 2;
-
   background: #353535;
   margin-right: 10px;
   border-radius: 100px;
   padding: 0px 15px;
   padding-top: 1.5px;
-`
-
-export const UpTitle = styled.p`
-
-`
-
-export const Local = styled.p`
-
-`
-
-export const Data = styled.p`
-
-`
-
-export const AboutArea = styled.div`
-
-`
-
-export const AboutLink = styled.a`
-
 `

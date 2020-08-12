@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
    display: flex;
+
    flex-wrap:wrap;
-   margin-bottom: 20px;
+   margin-bottom: 70px;
    margin-top: 50px;
 `;
 
-export const Project = styled.div`
+export const Project = styled.article`
   height: 338px;
   width: 328px;
   cursor: pointer;
@@ -17,7 +18,7 @@ export const Project = styled.div`
   background: #202022;
   padding: 40px ;
   overflow: hidden;
-  transition: 0.1s
+  transition: 0.1s;
 `
 
 export const UpTitle = styled.p`

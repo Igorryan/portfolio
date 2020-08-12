@@ -1,9 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from "framer-motion";
-import { css } from 'emotion';
 
-
-import { Container, Project, Title, Description, TagsContainer, Tag } from './styles';
+import { Container, Header, Project, Title, Description, TagsContainer, Tag } from './styles';
 
 interface IProject {
   id: number;
@@ -18,16 +16,17 @@ const projects: IProject[] = [
     title: 'Exclusive E-commerce',
     description: 'The exclusive is an e-commerce for selling clothes with unique prints. A project developed entirely by me.',
     tags: [
-      'Backend', 'Web', 'Mobile'
+      'Backend', 'Web', 'UI Design'
     ]
   },
   {
-    id: 2,
-    title: 'University Compartments - PUC Minas',
-    description: 'I developed to assist and optimize the management of the compartments made available to students. Besides being my first published project.',
+    id: 1,
+    title: 'Brodti Website',
+    description: 'BrodTi.com aims to reward the Internet users for the value they add to any corporate brand. I intend to use WebGL technology in the development.',
     tags: [
-      'Javascript', 'Firebase'
+      'Freelancer', 'Website'
     ]
+
   },
 ]
 
@@ -58,7 +57,10 @@ const Projectsmax: React.FC = () => {
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
             opacity: focus === id && projectSelected || noProjectsSelected ? 1 : 0.7,
           }}>
+            <Header>
             <Title>{title}</Title>
+            <span>Online</span>
+            </Header>
             <Description>{description}</Description>
             <TagsContainer key={id}>
               {tags.map((t, id) => (
