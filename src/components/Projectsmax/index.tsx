@@ -20,7 +20,7 @@ const projects: IProject[] = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     title: 'Brodti Website',
     description: 'BrodTi.com aims to reward the Internet users for the value they add to any corporate brand. I intend to use WebGL technology in the development.',
     tags: [
@@ -55,7 +55,7 @@ const Projectsmax: React.FC = () => {
           key={id}
         >
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
-            opacity: focus === id && projectSelected || noProjectsSelected ? 1 : 0.7,
+            opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
           }}>
             <Header>
             <Title>{title}</Title>

@@ -22,7 +22,7 @@ const Sidebar: React.FC = () => {
         Igor Ryan.
       </Title>
         <Description>
-        I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" target="_blank">Institute of the technology</a> and work as a freelance developer mainly in front-ends. I'm a CSS nerd, <a href="https://pt-br.reactjs.org/" target="_blank">React.js</a> and <a href="https://reactnative.dev/" target="_blank">React Native</a>. I also venture into the user interface design.
+        I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" rel="noopener noreferrer" target="_blank">Institute of the technology</a> and work as a freelance developer mainly in front-ends. I'm a CSS nerd, <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">React.js</a> and <a href="https://reactnative.dev/" rel="noopener noreferrer" target="_blank">React Native</a>. I also venture into the user interface design.
       </Description>
 
         <SkillsContainer>
@@ -36,14 +36,14 @@ const Sidebar: React.FC = () => {
         <img id="profileAvatar" src={ProfileAvatar} alt="" />
 
         <Contact>
-          <a href="https://www.linkedin.com/in/igorryan/" target="_blank">
+          <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
             <img src={LinkedinIcon} alt="GitHub Icon" />
             <span>Linkedin</span>
             <img src={AccessIcon} alt="" />
           </a>
         </Contact>
         <Contact>
-          <a href="https://github.com/Igorryan" target="_blank">
+          <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
             <img src={GithubIcon} alt="GitHub Icon" />
             <span>GitHub</span>
             <img src={AccessIcon} alt="" />

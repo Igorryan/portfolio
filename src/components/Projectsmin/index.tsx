@@ -93,7 +93,7 @@ const Projectsmin: React.FC = () => {
           key={id}
         >
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
-            opacity: focus === id && projectSelected || noProjectsSelected ? 1 : 0.7,
+            opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
             marginTop: id % 2 === 0 ? 25 : 0,
             marginBottom: id % 2 === 0 ? -16 : 0,
           }}>
@@ -106,7 +106,7 @@ const Projectsmin: React.FC = () => {
             <Title>
               {title}
             </Title>
-            <AboutArea><AboutLink href="#">About <img src={AboutIcon}></img></AboutLink></AboutArea>
+            <AboutArea><AboutLink href="#">About <img src={AboutIcon} alt="About"></img></AboutLink></AboutArea>
           </Project>
 
         </motion.div>
