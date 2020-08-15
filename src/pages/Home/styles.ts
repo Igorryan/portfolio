@@ -14,6 +14,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 1400px){
     width:88vw;
+    margin: 35px auto;
   }
 
 
