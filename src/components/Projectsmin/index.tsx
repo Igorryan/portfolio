@@ -19,29 +19,6 @@ interface IProject {
 const projects: IProject[] = [
   {
     id: 1,
-    title: 'Net Promoter Score (NPS)',
-    uptitle: 'IGTI',
-    local: 'Belo Horizonte ─ Brazil',
-    date: 'Jul 14, 2020',
-    tags: [
-      'API'
-    ],
-    about: 'Preparar um resumo para apresentar aqui.'
-  },
-  {
-    id: 2,
-    title: 'University Compartments',
-    uptitle: 'PUC MINAS',
-    local: 'Belo Horizonte ─ Brazil',
-    date: 'Feb 11, 2019',
-    tags: [
-      'Javascript',
-      'Firebase',
-    ],
-    about: 'I developed to assist and optimize the management of the compartments made available to students. Besides being my first published project.'
-  },
-  {
-    id: 3,
     title: 'E-commerce integration',
     uptitle: 'Freelancer',
     local: 'Santa Catarina ─ Brazil',
@@ -52,7 +29,18 @@ const projects: IProject[] = [
     about: 'Preparar um resumo para apresentar aqui.'
   },
   {
-    id: 4,
+    id: 2,
+    title: 'Net Promoter Score (NPS)',
+    uptitle: 'IGTI',
+    local: 'Belo Horizonte ─ Brazil',
+    date: 'Jul 14, 2020',
+    tags: [
+      'API'
+    ],
+    about: 'Preparar um resumo para apresentar aqui.'
+  },
+  {
+    id: 3,
     title: 'Study Projects and Apps',
     uptitle: 'Developments',
     local: 'Belo Horizonte ─ Brazil',
@@ -62,6 +50,18 @@ const projects: IProject[] = [
       'Mobile',
     ],
     about: 'Preparar um resumo para apresentar aqui.'
+  },
+  {
+    id: 4,
+    title: 'University Compartments',
+    uptitle: 'PUC MINAS',
+    local: 'Belo Horizonte ─ Brazil',
+    date: 'Feb 11, 2019',
+    tags: [
+      'Javascript',
+      'Firebase',
+    ],
+    about: 'I developed to assist and optimize the management of the compartments made available to students. Besides being my first published project.'
   },
 
 ]
