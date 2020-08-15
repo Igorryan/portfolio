@@ -18,8 +18,8 @@ const Sidebar: React.FC = () => {
 
       <InfoContainer>
         <Title>
-          Hi, I’m<br />
-        Igor Ryan.
+          Hi, I’m
+          Igor Ryan.
       </Title>
         <Description>
         I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" rel="noopener noreferrer" target="_blank">Institute of the technology</a> and work as a freelance developer mainly in front-ends. I'm a CSS nerd, <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">React.js</a> and <a href="https://reactnative.dev/" rel="noopener noreferrer" target="_blank">React Native</a>. I also venture into the user interface design.

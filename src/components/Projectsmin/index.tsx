@@ -94,8 +94,8 @@ const Projectsmin: React.FC = () => {
         >
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
             opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
-            marginTop: id % 2 === 0 ? 25 : 0,
-            marginBottom: id % 2 === 0 ? -16 : 0,
+            //marginTop: id % 2 === 0 ? 25 : 0,
+            //marginBottom: id % 2 === 0 ? -16 : 0,
           }}>
             <UpTitle>{uptitle.toUpperCase()}</UpTitle>
             <Local>{local}</Local>

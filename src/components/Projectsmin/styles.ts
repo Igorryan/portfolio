@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
    display: flex;
-
    flex-wrap:wrap;
-   margin-bottom: 70px;
+   margin-bottom: 5%;
    margin-top: 50px;
+
+   @media only screen and (max-width: 1400px){
+     flex-wrap: initial;
+     flex-direction: column;
+   }
 `;
 
 export const Project = styled.article`
@@ -19,6 +23,13 @@ export const Project = styled.article`
   padding: 40px ;
   overflow: hidden;
   transition: 0.1s;
+
+  @media only screen and (max-width: 1400px){
+    width: auto;
+    height: auto;
+    margin-left: 0;
+
+   }
 `
 
 export const UpTitle = styled.p`
@@ -46,6 +57,10 @@ export const TagsContainer = styled.div`
   margin-top: 40px;
   margin-bottom: 18px;
 
+  @media only screen and (max-width: 1400px){
+    margin-top: 30px;
+  }
+
 `
 
 export const Tag = styled.div`
@@ -62,12 +77,11 @@ export const Tag = styled.div`
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: 700;
-  height: 88px;
   line-height: 1.3em;
 `
 
 export const AboutArea = styled.div`
-
+  margin-top: 25px;
 `
 
 export const AboutLink = styled.a`

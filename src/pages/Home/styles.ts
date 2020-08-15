@@ -5,10 +5,27 @@ export const Container = styled.div`
   width: 1300px;
   line-height: 80px;
   font-family: 'Gothic A1', sans-serif;
-  align-items: stretch;
+  height: 100%;
+
+  @media only screen and (max-width: 1630px){
+    width:80vw;
+  }
+
+
+  @media only screen and (max-width: 1400px){
+    width:88vw;
+  }
+
+
 `;
 
 export const Section = styled.section`
   float: right;
   width: 680px;
+
+  @media only screen and (max-width: 1400px){
+    float: none;
+    width: auto;
+
+  }
 `

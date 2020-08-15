@@ -5,13 +5,16 @@ export const Container = styled.section`
 `;
 
 export const Project = styled.article`
-  height: 200px;
   margin: 0 8px 8px 8px;
   background: #202022;
   padding: 40px;
   overflow: hidden;
   cursor: pointer;
   transition: 0.1s;
+
+  @media only screen and (max-width: 1400px){
+  margin: 0 0 8px 0;
+  }
 `
 
 export const Header = styled.div`

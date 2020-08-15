@@ -6,7 +6,13 @@ export const Container = styled.aside`
   justify-content: space-between;
   flex-direction: column;
   width: 400px;
-  height: 85vh;
+  height: 100%;
+
+  @media only screen and (max-width: 1400px){
+    position: relative;
+    width: 100%;
+  }
+
 `;
 
 export const InfoContainer = styled.div``
@@ -16,6 +22,12 @@ export const Title = styled.h1`
   font-weight: 800;
   line-height: 70px;
   color: #FFF;
+  width: 300px;
+
+  @media only screen and (min-width: 825px) and (max-width: 1400px){
+    width: auto;
+  }
+
 `
 export const Description = styled.p`
   margin-top: 30px;
@@ -45,18 +57,31 @@ export const SkillsContainer = styled.div`
   img.iconBorder {
     border: 1px solid #000000;
   }
+
+  @media only screen and (max-width: 1400px){
+    margin: 20px 0;
+
+  }
 `
 
 export const ContactContainer = styled.div`
   display: flex;
   align-items: center;
-
+  position: absolute;
+  bottom: 100px;
 
   img#profileAvatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-right: 20px;
+  }
+
+
+  @media only screen and (max-width: 1400px){
+  position: relative;
+  bottom: 0;
+  margin: 20px 0 40px;
   }
 `
 export const Contact = styled.footer`
