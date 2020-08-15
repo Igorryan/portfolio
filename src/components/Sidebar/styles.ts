@@ -66,10 +66,10 @@ export const SkillsContainer = styled.div`
 export const ContactContainer = styled.div`
   display: flex;
   align-items: center;
+  left: 0;
   position: absolute;
   bottom: 100px;
-  transition: 0.2s;
-
+  width: 100%;
   background: #151515;
 
   div {

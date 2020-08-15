@@ -28,11 +28,9 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   z-index: 1;
   top: 0;
-  width: 100%;
   height: 100px;
-  left: 0;
-  padding: 0 50px;
+  padding: 0 30px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0,.5);
-  transition: 0.2s
+
 }
 `;
