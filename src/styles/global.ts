@@ -30,9 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   height: 100px;
-  margin: 0;
   left: 0;
-  padding: 0 20px;
-
+  padding: 0 50px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0,.5);
+  transition: 0.2s
 }
 `;

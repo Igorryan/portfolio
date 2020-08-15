@@ -11,13 +11,10 @@ export const Container = styled.div`
     width:80vw;
   }
 
-
   @media only screen and (max-width: 1400px){
     width:88vw;
     margin: 35px auto;
   }
-
-
 `;
 
 export const Section = styled.section`
@@ -27,6 +24,6 @@ export const Section = styled.section`
   @media only screen and (max-width: 1400px){
     float: none;
     width: auto;
-
+    margin-top: 40px;
   }
 `

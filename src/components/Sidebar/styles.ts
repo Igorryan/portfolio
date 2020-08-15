@@ -58,7 +58,7 @@ export const SkillsContainer = styled.div`
   }
 
   @media only screen and (max-width: 1400px){
-    margin: 20px 0;
+    margin: 20px 0 40px;
 
   }
 `
@@ -68,7 +68,7 @@ export const ContactContainer = styled.div`
   align-items: center;
   position: absolute;
   bottom: 100px;
-  transition: 0.4s;
+  transition: 0.2s;
 
   background: #151515;
 
@@ -91,7 +91,6 @@ export const ContactContainer = styled.div`
   @media only screen and (max-width: 1400px){
   position: relative;
   bottom: 0;
-  margin: 20px 0 40px;
   justify-content: space-between;
   }
 `
