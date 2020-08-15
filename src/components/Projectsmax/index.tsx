@@ -13,7 +13,7 @@ interface IProject {
 const projects: IProject[] = [
   {
     id: 1,
-    title: 'Exclusive E-commerce',
+    title: 'E-commerce Exclusive',
     description: 'The exclusive is an e-commerce for selling clothes with unique prints. A project developed entirely by me.',
     tags: [
       'Backend', 'Web', 'UI Design'

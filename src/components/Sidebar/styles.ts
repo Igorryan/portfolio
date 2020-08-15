@@ -12,7 +12,6 @@ export const Container = styled.aside`
     position: relative;
     width: 100%;
   }
-
 `;
 
 export const InfoContainer = styled.div``
@@ -69,6 +68,17 @@ export const ContactContainer = styled.div`
   align-items: center;
   position: absolute;
   bottom: 100px;
+  transition: 0.4s;
+
+  background: #151515;
+
+  div {
+    display: flex;
+
+    @media only screen and (max-width: 390px){
+      display: block;
+    }
+  }
 
   img#profileAvatar {
     width: 60px;
@@ -82,6 +92,7 @@ export const ContactContainer = styled.div`
   position: relative;
   bottom: 0;
   margin: 20px 0 40px;
+  justify-content: space-between;
   }
 `
 export const Contact = styled.footer`
@@ -94,6 +105,10 @@ export const Contact = styled.footer`
     text-decoration: none;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: 390px){
+      margin: 8px 0;
+    }
 
     img {
       margin: 0 13px;
