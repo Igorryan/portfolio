@@ -9,7 +9,6 @@ import FigmaIcon from '../../assets/icons/figmaicon.svg';
 import GithubIcon from "../../assets/icons/github.svg";
 import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg"
-import $ from 'jquery'
 
 import ProfileAvatar from '../../assets/profile.jpeg';
 
@@ -24,12 +23,9 @@ const Sidebar: React.FC = () => {
 
 
   const verifyScroll = useCallback(() => {
-    console.log(window.scrollY)
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
       if (!contactPositionScroll) {
         contactContainerRef.current?.classList.add('headerFixed');
-        $(contactContainerRef.current).hide()
-        $(contactContainerRef.current).slideDown(300)
         setContactPositionScroll(true)
       };
     } else if(window.scrollY <= 369 && !contactPositionScroll){
