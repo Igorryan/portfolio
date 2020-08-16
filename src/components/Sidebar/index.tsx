@@ -24,6 +24,7 @@ const Sidebar: React.FC = () => {
 
 
   const verifyScroll = useCallback(() => {
+    console.log(window.scrollY)
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
       if (!contactPositionScroll) {
         contactContainerRef.current?.classList.add('headerFixed');
@@ -31,7 +32,7 @@ const Sidebar: React.FC = () => {
         $(contactContainerRef.current).slideDown(300)
         setContactPositionScroll(true)
       };
-    } else if(window.scrollY <= 333 && !contactPositionScroll){
+    } else if(window.scrollY <= 369 && !contactPositionScroll){
       contactContainerRef.current?.classList.remove('headerFixed')
       setContactPositionScroll(false);
     }
