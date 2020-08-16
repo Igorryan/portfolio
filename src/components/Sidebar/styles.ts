@@ -71,7 +71,7 @@ export const ContactContainer = styled.div`
   bottom: 100px;
   width: 100%;
   background: #151515;
-  transition: 0.4s;
+
   div {
     display: flex;
 
