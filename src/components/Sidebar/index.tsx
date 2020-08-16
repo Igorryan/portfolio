@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState, useRef } from 'react';
 
 import { Container, InfoContainer, Title, Description, SkillsContainer, ContactContainer, Contact } from './styles';
 
-import JavascriptIcon from '../../assets/icons/jsicon.svg';
+import ReactIcon from '../../assets/icons/react.svg';
 import TypescriptIcon from '../../assets/icons/tsicon.svg';
 import FigmaIcon from '../../assets/icons/figmaicon.svg';
 
@@ -49,8 +49,8 @@ const Sidebar: React.FC = () => {
 
         <SkillsContainer>
           <img src={TypescriptIcon} alt="Typescript"></img>
-          <img src={JavascriptIcon} alt="Javascript"></img>
-          <img className="iconBorder" src={FigmaIcon} alt="Figma"></img>
+          <img src={ReactIcon} alt="React"></img>
+          <img src={FigmaIcon} alt="Figma"></img>
         </SkillsContainer>
       </InfoContainer>
       <div style={{height: 100}}>

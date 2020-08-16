@@ -53,10 +53,6 @@ export const SkillsContainer = styled.div`
     height: 30px;
   }
 
-  img.iconBorder {
-    border: 1px solid #000000;
-  }
-
   @media only screen and (max-width: 1400px){
     margin: 20px 0 40px;
 
