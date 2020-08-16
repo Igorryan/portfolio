@@ -34,6 +34,7 @@ const Sidebar: React.FC = () => {
     } else if(window.scrollY <= 333 && !contactPositionScroll){
       contactContainerRef.current?.classList.remove('headerFixed')
       setContactPositionScroll(false);
+
     }
   }, [contactPositionScroll])
 
@@ -55,6 +56,7 @@ const Sidebar: React.FC = () => {
           <img className="iconBorder" src={FigmaIcon} alt="Figma"></img>
         </SkillsContainer>
       </InfoContainer>
+      <div style={{height: 100}}>
       <ContactContainer ref={contactContainerRef}>
         <img id="profileAvatar" src={ProfileAvatar} alt="" />
         <div>
@@ -74,6 +76,8 @@ const Sidebar: React.FC = () => {
           </Contact>
         </div>
       </ContactContainer>
+      </div>
+
     </Container>
   )
 }

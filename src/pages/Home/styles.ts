@@ -24,6 +24,5 @@ export const Section = styled.section`
   @media only screen and (max-width: 1400px){
     float: none;
     width: auto;
-    margin-top: 40px;
   }
 `

@@ -33,7 +33,7 @@ export const Header = styled.div`
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.3em;
 `
 
 export const Description = styled.p`
