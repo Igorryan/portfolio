@@ -3,14 +3,16 @@ import React, { useEffect, useCallback, useState, useRef } from 'react';
 import { Container, InfoContainer, Title, Description, SkillsContainer, ContactContainer, Contact } from './styles';
 
 import ReactIcon from '../../assets/icons/react.svg';
-import TypescriptIcon from '../../assets/icons/tsicon.svg';
-import FigmaIcon from '../../assets/icons/figmaicon.svg';
+import TypescriptIcon from '../../assets/icons/typescript.svg';
+import FigmaIcon from '../../assets/icons/figma.svg';
 
 import GithubIcon from "../../assets/icons/github.svg";
 import LinkedinIcon from "../../assets/icons/linkedin.svg";
-import AccessIcon from "../../assets/icons/access.svg"
+import AccessIcon from "../../assets/icons/access.svg";
+import $ from 'jquery';
 
 import ProfileAvatar from '../../assets/profile.jpeg';
+
 
 const Sidebar: React.FC = () => {
 
@@ -26,6 +28,8 @@ const Sidebar: React.FC = () => {
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
       if (!contactPositionScroll) {
         contactContainerRef.current?.classList.add('headerFixed');
+        $(contactContainerRef.current).hide();
+        $(contactContainerRef.current).slideDown(200);
         setContactPositionScroll(true)
       };
     } else if(window.scrollY <= 369 && !contactPositionScroll){
