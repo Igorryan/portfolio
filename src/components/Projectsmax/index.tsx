@@ -22,7 +22,7 @@ const projects: IProject[] = [
   {
     id: 2,
     title: 'Brodti Website',
-    description: 'BrodTi.com aims to reward the Internet users for the value they add to any corporate brand. I intend to use WebGL technology in the development.',
+    description: 'BrodTi.com aims to reward the Internet users for the value they add to any corporate brand. I made a very interesting slide show.',
     tags: [
       'Freelancer', 'Website'
     ]

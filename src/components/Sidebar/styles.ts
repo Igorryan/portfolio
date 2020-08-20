@@ -5,7 +5,7 @@ export const Container = styled.aside`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 400px;
+  width: 410px;
   height: 100%;
 
   @media only screen and (max-width: 1400px){

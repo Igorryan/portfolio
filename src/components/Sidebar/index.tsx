@@ -48,7 +48,8 @@ const Sidebar: React.FC = () => {
           Igor Ryan.
       </Title>
         <Description>
-          I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" rel="noopener noreferrer" target="_blank">Institute of the technology</a> and work as a freelance developer mainly in front-ends. I'm a CSS nerd, <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">React.js</a> and <a href="https://reactnative.dev/" rel="noopener noreferrer" target="_blank">React Native</a>. I also venture into the user interface design.
+          I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" rel="noopener noreferrer" target="_blank">Institute of the technology</a> and work as a freelance fullstack developer mainly in <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">React.js</a> and <a href="https://reactnative.dev/" rel="noopener noreferrer" target="_blank">React Native</a>.
+           I'm a CSS nerd and I also venture into the user interface design.
       </Description>
 
         <SkillsContainer>
