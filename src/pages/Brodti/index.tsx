@@ -17,7 +17,6 @@ const Brodti: React.FC = () => {
   return (
     <Container>
       <Sidebar></Sidebar>
-
       <Section>
         <Video autoPlay loop muted playsInline>
           <source src={video1} />
@@ -30,8 +29,6 @@ const Brodti: React.FC = () => {
         </Video>
         <Image width="100%" src={mobile} alt="mobile screens"/>
       </Section>
-
-
     </Container>
   );
 }
