@@ -27,15 +27,17 @@ const Sidebar: React.FC = () => {
   const verifyScroll = useCallback(() => {
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
       if (!contactPositionScroll) {
-        contactContainerRef.current?.classList.add('headerFixed');
-        $(contactContainerRef.current).hide();
-        $(contactContainerRef.current).slideDown(200);
-        setContactPositionScroll(true)
+        const windowSize = $(window).width();
+        if (windowSize && windowSize < 1400) {
+          contactContainerRef.current?.classList.add('headerFixed');
+          $(contactContainerRef.current).hide();
+          $(contactContainerRef.current).slideDown(200);
+          setContactPositionScroll(true)
+        }
       };
-    } else if(window.scrollY <= 369 && !contactPositionScroll){
+    } else if (window.scrollY <= 369 && !contactPositionScroll) {
       contactContainerRef.current?.classList.remove('headerFixed')
       setContactPositionScroll(false);
-
     }
   }, [contactPositionScroll])
 
@@ -58,26 +60,26 @@ const Sidebar: React.FC = () => {
           <img src={FigmaIcon} alt="Figma"></img>
         </SkillsContainer>
       </InfoContainer>
-      <div style={{height: 100}}>
-      <ContactContainer ref={contactContainerRef}>
-        <img id="profileAvatar" src={ProfileAvatar} alt="" />
-        <div>
-          <Contact>
-            <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
-              <img src={LinkedinIcon} alt="GitHub Icon" />
-              <span>Linkedin</span>
-              <img src={AccessIcon} alt="" />
-            </a>
-          </Contact>
-          <Contact>
-            <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
-              <img src={GithubIcon} alt="GitHub Icon" />
-              <span>GitHub</span>
-              <img src={AccessIcon} alt="" />
-            </a>
-          </Contact>
-        </div>
-      </ContactContainer>
+      <div style={{ height: 100 }}>
+        <ContactContainer ref={contactContainerRef}>
+          <img id="profileAvatar" src={ProfileAvatar} alt="" />
+          <div>
+            <Contact>
+              <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
+                <img src={LinkedinIcon} alt="GitHub Icon" />
+                <span>Linkedin</span>
+                <img src={AccessIcon} alt="" />
+              </a>
+            </Contact>
+            <Contact>
+              <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
+                <img src={GithubIcon} alt="GitHub Icon" />
+                <span>GitHub</span>
+                <img src={AccessIcon} alt="" />
+              </a>
+            </Contact>
+          </div>
+        </ContactContainer>
       </div>
 
     </Container>

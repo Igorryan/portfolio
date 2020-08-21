@@ -23,7 +23,7 @@ export const Project = styled.article`
   cursor: pointer;
   transition: 0.1s;
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
   margin: 0 0 8px 0;
   }
 `

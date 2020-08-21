@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   margin: 75px auto;
@@ -12,7 +12,7 @@ export const Container = styled.div`
     width:80vw;
   }
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
     width:88vw;
     margin: 35px auto;
   }
@@ -23,3 +23,8 @@ export const Video = styled.video`
   border-radius: 20px;
   margin-bottom: 20px;
 `
+
+export const Image = styled.img`
+  margin: 30px 0;
+`
+
