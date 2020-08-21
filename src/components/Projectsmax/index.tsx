@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from "framer-motion";
 
-import { Container, Header, Project, Title, Description, TagsContainer, Tag } from './styles';
+import { Container, StyledLink, Header, Project, Title, Description, TagsContainer, Tag } from './styles';
 
 interface IProject {
   id: number;
@@ -49,28 +49,30 @@ const Projectsmax: React.FC = () => {
 
   return (
     <Container>
-      {projects.map(({ id, title, description, tags }, i) => (
-        <motion.div
-          whileHover={{ scale: 1.12 }}
-          key={id}
-        >
-          <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
-            opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
-          }}>
-            <Header>
-            <Title>{title}</Title>
-            <span>Online</span>
-            </Header>
-            <Description>{description}</Description>
-            <TagsContainer key={id}>
-              {tags.map((t, id) => (
-                <Tag key={id}>{t}</Tag>
-              ))}
-            </TagsContainer>
-          </Project>
-        </motion.div>
-      ))}
+      <StyledLink to="/brodti">
 
+        {projects.map(({ id, title, description, tags }, i) => (
+          <motion.div
+            whileHover={{ scale: 1.12 }}
+            key={id}
+          >
+            <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
+              opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
+            }}>
+              <Header>
+                <Title>{title}</Title>
+                <span>Online</span>
+              </Header>
+              <Description>{description}</Description>
+              <TagsContainer key={id}>
+                {tags.map((t, id) => (
+                  <Tag key={id}>{t}</Tag>
+                ))}
+              </TagsContainer>
+            </Project>
+          </motion.div>
+        ))}
+      </StyledLink>
     </Container>
   );
 }

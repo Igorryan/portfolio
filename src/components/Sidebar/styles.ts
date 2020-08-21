@@ -8,7 +8,7 @@ export const Container = styled.aside`
   width: 410px;
   height: 100%;
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
     position: relative;
     width: 100%;
   }
@@ -23,7 +23,7 @@ export const Title = styled.h1`
   color: #FFF;
   width: 300px;
 
-  @media only screen and (min-width: 825px) and (max-width: 1400px){
+  @media only screen and (min-width: 825px) and (max-width: 1300px){
     width: auto;
   }
 
@@ -53,7 +53,7 @@ export const SkillsContainer = styled.div`
     height: 30px;
   }
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
     margin: 20px 0 40px;
 
   }
@@ -84,7 +84,7 @@ export const ContactContainer = styled.div`
   }
 
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
   position: relative;
   bottom: 0;
   justify-content: space-between;

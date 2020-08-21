@@ -7,6 +7,7 @@ export const Container = styled.div`
   font-family: 'Gothic A1', sans-serif;
   height: 100%;
 
+
   @media only screen and (max-width: 1630px){
     width:80vw;
   }
@@ -16,3 +17,9 @@ export const Container = styled.div`
     margin: 35px auto;
   }
 `;
+
+export const Video = styled.video`
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+`

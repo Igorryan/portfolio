@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Container, Section } from './styles';
+import { Container } from './styles';
 
 import Sidebar from "../../components/Sidebar";
+import Section from "../../components/Section";
 import ProjectsMax from "../../components/Projectsmax";
 import ProjectsMin from "../../components/Projectsmin"
 
@@ -15,8 +16,6 @@ const Home: React.FC = () => {
         <ProjectsMax />
         <ProjectsMin />
       </Section>
-
-
     </Container>
   );
 }

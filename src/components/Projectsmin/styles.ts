@@ -6,7 +6,7 @@ export const Container = styled.section`
    margin-bottom: 5%;
    margin-top: 50px;
 
-   @media only screen and (max-width: 1400px){
+   @media only screen and (max-width: 1300px){
      flex-wrap: initial;
      flex-direction: column;
    }
@@ -24,7 +24,7 @@ export const Project = styled.article`
   overflow: hidden;
   transition: 0.1s;
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
     width: auto;
     height: auto;
     margin-left: 0;
@@ -57,7 +57,7 @@ export const TagsContainer = styled.div`
   margin-top: 40px;
   margin-bottom: 18px;
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 1300px){
     margin-top: 30px;
   }
 
