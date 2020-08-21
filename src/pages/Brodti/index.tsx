@@ -18,13 +18,13 @@ const Brodti: React.FC = () => {
       <Sidebar></Sidebar>
 
       <Section>
-        <Video autoPlay loop>
+        <Video autoPlay loop muted playsInline>
           <source src={video1} />
         </Video>
-        <Video autoPlay loop>
+        <Video autoPlay loop muted playsInline>
           <source src={video2} />
         </Video>
-        <Video autoPlay loop>
+        <Video autoPlay loop muted playsInline>
           <source src={video3} />
         </Video>
       </Section>
