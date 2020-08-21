@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { Container, Video, Image } from './styles';
 import Sidebar from '../../components/Sidebar';
@@ -10,10 +10,6 @@ import video3 from '../../assets/brodti/3.mp4';
 import mobile from '../../assets/brodti/mobile.gif';
 
 const Brodti: React.FC = () => {
-  useEffect(() => {
-
-  })
-
   return (
     <Container>
       <Sidebar></Sidebar>
