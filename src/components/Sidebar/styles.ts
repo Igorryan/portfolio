@@ -14,7 +14,9 @@ export const Container = styled.aside`
   }
 `;
 
-export const InfoContainer = styled.div``
+export const InfoContainer = styled.div`
+
+`
 
 export const Title = styled.h1`
   font-size: 60px;
@@ -26,8 +28,16 @@ export const Title = styled.h1`
   @media only screen and (min-width: 825px) and (max-width: 1300px){
     width: auto;
   }
-
 `
+
+export const Logo = styled.img`
+  width: 200px;
+
+  @media only screen and (max-width: 1300px){
+    width: 200px;
+  }
+`
+
 export const Description = styled.p`
   margin-top: 30px;
 
@@ -49,12 +59,18 @@ export const SkillsContainer = styled.div`
 
   img {
     margin-right: 18px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   @media only screen and (max-width: 1300px){
     margin: 20px 0 40px;
+
+    img{
+      margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    }
 
   }
 `

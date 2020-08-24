@@ -1,28 +1,28 @@
-import React, { useEffect, useCallback, useState, useRef } from 'react';
+import React, { useEffect, useCallback, useState, useRef} from 'react';
+import { Container, InfoContainer, Title, Logo, Description, SkillsContainer, ContactContainer, Contact } from './styles';
 
-import { Container, InfoContainer, Title, Description, SkillsContainer, ContactContainer, Contact } from './styles';
-
-import ReactIcon from '../../assets/icons/react.svg';
-import TypescriptIcon from '../../assets/icons/typescript.svg';
-import FigmaIcon from '../../assets/icons/figma.svg';
+import IHardSkills from '../../DTOS/IHardSkills';
+import $, { parseHTML } from 'jquery';
+import ReactTooltip from 'react-tooltip';
 
 import GithubIcon from "../../assets/icons/github.svg";
 import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg";
-import $ from 'jquery';
-
 import ProfileAvatar from '../../assets/profile.jpeg';
 
+interface ISideBar {
+  title: string;
+  hardSkills: IHardSkills[];
+  logo?: string;
+}
 
-const Sidebar: React.FC = () => {
-
+const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
   const contactContainerRef = useRef<HTMLDivElement>(null);
   const [contactPositionScroll, setContactPositionScroll] = useState<boolean>();
 
   useEffect(() => {
-    window.addEventListener('scroll', verifyScroll)
-  })
-
+    window.addEventListener('scroll', verifyScroll);
+  });
 
   const verifyScroll = useCallback(() => {
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
@@ -39,25 +39,23 @@ const Sidebar: React.FC = () => {
       contactContainerRef.current?.classList.remove('headerFixed')
       setContactPositionScroll(false);
     }
-  }, [contactPositionScroll])
+  }, [contactPositionScroll]);
 
   return (
     <Container>
+      <ReactTooltip place='top' effect="solid" />
 
       <InfoContainer>
-        <Title>
-          Hi, I’m
-          Igor Ryan.
-      </Title>
+        {logo ? <Logo src={logo}/> : <Title>{title}</Title>}
+
         <Description>
-          I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" rel="noopener noreferrer" target="_blank">Institute of the technology</a> and work as a freelance fullstack developer mainly in <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">React.js</a> and <a href="https://reactnative.dev/" rel="noopener noreferrer" target="_blank">React Native</a>.
-           I'm a CSS nerd and I also venture into the user interface design.
-      </Description>
+          {children}
+        </Description>
 
         <SkillsContainer>
-          <img src={TypescriptIcon} alt="Typescript"></img>
-          <img src={ReactIcon} alt="React"></img>
-          <img src={FigmaIcon} alt="Figma"></img>
+          {hardSkills.map(skill => (
+            <img key={skill.icon} data-tip={skill.name} src={skill.icon} alt={skill.name}></img>
+          ))}
         </SkillsContainer>
       </InfoContainer>
       <div style={{ height: 100 }}>
