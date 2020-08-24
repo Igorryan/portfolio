@@ -97,6 +97,7 @@ export const ContactContainer = styled.div`
     height: 60px;
     border-radius: 50%;
     margin-right: 20px;
+    margin-top: -10px;
   }
 
   @media only screen and (max-width: 1300px){
@@ -105,8 +106,9 @@ export const ContactContainer = styled.div`
   justify-content: space-between;
 
   img#profileAvatar {
-    width: 40px;
-    height: 40px;
+    margin-top: 0px;
+    width: 45px;
+    height: 45px;
   }
   }
 `
