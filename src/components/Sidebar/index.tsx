@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState, useRef} from 'react';
 import { Container, InfoContainer, Title, Logo, Description, SkillsContainer, ContactContainer, Contact } from './styles';
 
 import IHardSkills from '../../DTOS/IHardSkills';
-import $, { parseHTML } from 'jquery';
+import $ from 'jquery';
 import ReactTooltip from 'react-tooltip';
 
 import GithubIcon from "../../assets/icons/github.svg";
