@@ -58,7 +58,7 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
           ))}
         </SkillsContainer>
       </InfoContainer>
-      <div style={{ height: 100 }}>
+      <div style={{ height: 90 }}>
         <ContactContainer ref={contactContainerRef}>
           <img id="profileAvatar" src={ProfileAvatar} alt="" />
           <div>

@@ -67,7 +67,7 @@ export const SkillsContainer = styled.div`
     margin: 20px 0 40px;
 
     img{
-      margin-right: 10px;
+    margin-right: 10px;
     width: 30px;
     height: 30px;
     }
@@ -99,11 +99,15 @@ export const ContactContainer = styled.div`
     margin-right: 20px;
   }
 
-
   @media only screen and (max-width: 1300px){
   position: relative;
   bottom: 0;
   justify-content: space-between;
+
+  img#profileAvatar {
+    width: 40px;
+    height: 40px;
+  }
   }
 `
 export const Contact = styled.footer`
@@ -124,6 +128,19 @@ export const Contact = styled.footer`
     img {
       margin: 0 13px;
       margin-top: -4px;
+    }
+
+  }
+
+  @media only screen and (max-width: 1300px){
+    font-size: 14px;
+    a {
+      margin-top: 4px;
+      img {
+      width: 50%;
+      margin: 0 13px;
+      margin-top: -3px;
+    }
     }
 
   }
