@@ -92,7 +92,7 @@ const Projectsmin: React.FC = () => {
 
   const handleNavigateToProject = useCallback((page) => {
     history.push(page)
-  }, [])
+  }, [history])
 
   return (
     <Container>

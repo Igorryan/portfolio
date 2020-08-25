@@ -23,7 +23,7 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', verifyScroll);
-  }, []);
+  });
 
   const verifyScroll = useCallback(() => {
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {

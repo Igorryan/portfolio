@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from "framer-motion";
 
-import { Container, StyledLink, Header, Project, Title, Description, TagsContainer, Tag } from './styles';
+import { Container, Header, Project, Title, Description, TagsContainer, Tag } from './styles';
 
 interface IProject {
   id: number;
