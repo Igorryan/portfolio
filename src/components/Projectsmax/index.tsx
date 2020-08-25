@@ -19,15 +19,6 @@ const projects: IProject[] = [
       'Backend', 'Web', 'UI Design'
     ]
   },
-  {
-    id: 2,
-    title: 'Brodti Website',
-    description: 'BrodTi.com aims to reward the Internet users for the value they add to any corporate brand. I made a very interesting slide show.',
-    tags: [
-      'Freelancer', 'Website'
-    ]
-
-  },
 ]
 
 const Projectsmax: React.FC = () => {
@@ -49,8 +40,6 @@ const Projectsmax: React.FC = () => {
 
   return (
     <Container>
-      <StyledLink to="/brodti">
-
         {projects.map(({ id, title, description, tags }, i) => (
           <motion.div
             whileHover={{ scale: 1.12 }}
@@ -72,7 +61,6 @@ const Projectsmax: React.FC = () => {
             </Project>
           </motion.div>
         ))}
-      </StyledLink>
     </Container>
   );
 }

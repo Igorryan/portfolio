@@ -54,7 +54,7 @@ export const TagsContainer = styled.div`
   display: flex;
   align-items: center;
 
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 18px;
 
   @media only screen and (max-width: 1300px){
@@ -80,17 +80,3 @@ export const Title = styled.h1`
   line-height: 1.3em;
 `
 
-export const AboutArea = styled.div`
-  margin-top: 25px;
-`
-
-export const AboutLink = styled.a`
-  font-size: 16px;
-  text-decoration: none;
-  color: #FFF;
-
-  img {
-    margin-left: 10px;
-    margin-bottom: -2px;
-  }
-`

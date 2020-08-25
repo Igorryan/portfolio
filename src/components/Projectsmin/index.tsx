@@ -1,24 +1,31 @@
 import React, { useCallback, useState } from 'react';
 import { motion } from "framer-motion";
+import { useHistory } from "react-router-dom";
 
-import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data, AboutArea, AboutLink } from './styles';
-
-import AboutIcon from '../../assets/icons/access.svg';
+import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data } from './styles';
 
 interface IProject {
-  id: number;
   title: string;
   uptitle: string;
   local: string;
   date: string;
   tags: string[];
-  about: string;
+  page: string;
 }
 
 
 const projects: IProject[] = [
   {
-    id: 1,
+    title: 'BrodTi',
+    uptitle: 'Freelancer',
+    local: 'San Francisco ─ California',
+    date: 'Aug 13, 2020',
+    tags: [
+      'Website'
+    ],
+    page: '/brodti'
+  },
+  {
     title: 'E-commerce integration',
     uptitle: 'Freelancer',
     local: 'Santa Catarina ─ Brazil',
@@ -26,21 +33,9 @@ const projects: IProject[] = [
     tags: [
       'Microsservice'
     ],
-    about: 'Preparar um resumo para apresentar aqui.'
+    page: ''
   },
   {
-    id: 2,
-    title: 'Net Promoter Score (NPS)',
-    uptitle: 'IGTI',
-    local: 'Belo Horizonte ─ Brazil',
-    date: 'Jul 14, 2020',
-    tags: [
-      'API'
-    ],
-    about: 'Preparar um resumo para apresentar aqui.'
-  },
-  {
-    id: 3,
     title: 'Study Projects and Apps',
     uptitle: 'Developments',
     local: 'Belo Horizonte ─ Brazil',
@@ -49,10 +44,19 @@ const projects: IProject[] = [
       'Web',
       'Mobile',
     ],
-    about: 'Preparar um resumo para apresentar aqui.'
+    page: ''
   },
   {
-    id: 4,
+    title: 'Net Promoter Score (NPS)',
+    uptitle: 'IGTI',
+    local: 'Belo Horizonte ─ Brazil',
+    date: 'Apr 14, 2020',
+    tags: [
+      'API'
+    ],
+    page: ''
+  },
+  {
     title: 'University Compartments',
     uptitle: 'PUC MINAS',
     local: 'Belo Horizonte ─ Brazil',
@@ -61,7 +65,7 @@ const projects: IProject[] = [
       'Javascript',
       'Firebase',
     ],
-    about: 'I developed to assist and optimize the management of the compartments made available to students. Besides being my first published project.'
+    page: ''
   },
 
 ]
@@ -72,6 +76,8 @@ const Projectsmin: React.FC = () => {
   const [projectSelected, setProjectSelected] = useState<boolean>(false);
   const [focus, setFocus] = useState<number>();
   const [noProjectsSelected, setNoProjectsSelected] = useState<boolean>(true);
+
+  const history = useHistory();
 
   const handleSelectedProject = useCallback((id: number) => {
     setFocus(id);
@@ -84,29 +90,32 @@ const Projectsmin: React.FC = () => {
     setNoProjectsSelected(true);
   }, []);
 
+  const handleNavigateToProject = useCallback((page) => {
+    history.push(page)
+  }, [])
+
   return (
     <Container>
 
-      {projects.map(({ id, uptitle, title, local, date, tags }, i) => (
+      {projects.map(({ uptitle, title, local, date, tags, page }, i) => (
         <motion.div
           whileHover={{ scale: 1.12 }}
-          key={id}
+          key={i}
         >
-          <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
-            opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
-            //marginTop: id % 2 === 0 ? 25 : 0,
-            //marginBottom: id % 2 === 0 ? -16 : 0,
+          <Project onClick={() => { handleNavigateToProject(page) }} onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(i)} style={{
+            opacity: (focus === i && projectSelected) || noProjectsSelected ? 1 : 0.6,
+            // marginTop: i % 2 !== 0 ? 25 : 0,
+            // marginBottom: i % 2 !== 0 ? -16 : 0,
           }}>
             <UpTitle>{uptitle.toUpperCase()}</UpTitle>
             <Local>{local}</Local>
             <Data>{date}</Data>
-            <TagsContainer key={id}>{tags.map((t, id) => (
+            <TagsContainer key={i}>{tags.map((t, id) => (
               <Tag key={id}>{t}</Tag>
             ))}</TagsContainer>
             <Title>
               {title}
             </Title>
-            <AboutArea><AboutLink href="#">About <img src={AboutIcon} alt="About"></img></AboutLink></AboutArea>
           </Project>
 
         </motion.div>
