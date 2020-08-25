@@ -9,6 +9,7 @@ import GithubIcon from "../../assets/icons/github.svg";
 import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg";
 import ProfileAvatar from '../../assets/profile.jpeg';
+import { Link } from 'react-router-dom';
 
 interface ISideBar {
   title: string;
@@ -60,7 +61,7 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
       </InfoContainer>
       <div style={{ height: 78 }}>
         <ContactContainer ref={contactContainerRef}>
-          <img id="profileAvatar" src={ProfileAvatar} alt="" />
+          <Link to="/"><img id="profileAvatar" src={ProfileAvatar} alt="" /></Link>
           <div>
             <Contact>
               <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
