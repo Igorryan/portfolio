@@ -112,6 +112,48 @@ export const ContactContainer = styled.div`
   }
   }
 `
+
+export const BackToProjectsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  left: 0;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  background: #151515;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+
+    span {
+      margin-top: 3px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  div {
+    display: flex;
+
+    @media only screen and (max-width: 390px){
+      display: block;
+    }
+  }
+
+
+  @media only screen and (max-width: 1300px){
+  position: relative;
+  bottom: 0;
+  justify-content: space-between;
+  }
+`
+
 export const Contact = styled.footer`
   display: flex;
   align-items: center;

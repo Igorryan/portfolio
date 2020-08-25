@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback, useState, useRef} from 'react';
-import { Container, InfoContainer, Title, Logo, Description, SkillsContainer, ContactContainer, Contact } from './styles';
+import React, { useEffect, useCallback, useState, useRef } from 'react';
+import { Container, InfoContainer, Title, Logo, Description, SkillsContainer, ContactContainer, BackToProjectsContainer, Contact } from './styles';
 
 import IHardSkills from '../../DTOS/IHardSkills';
 import $ from 'jquery';
@@ -10,14 +10,17 @@ import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg";
 import ProfileAvatar from '../../assets/profile.jpeg';
 import { Link } from 'react-router-dom';
+import { RiArrowLeftSFill } from 'react-icons/ri'
+
 
 interface ISideBar {
   title: string;
   hardSkills: IHardSkills[];
   logo?: string;
+  backArrow?: boolean;
 }
 
-const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
+const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, backArrow, children }) => {
   const contactContainerRef = useRef<HTMLDivElement>(null);
   const [contactPositionScroll, setContactPositionScroll] = useState<boolean>();
 
@@ -47,7 +50,7 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
       <ReactTooltip place='top' effect="solid" />
 
       <InfoContainer>
-        {logo ? <Logo src={logo}/> : <Title>{title}</Title>}
+        {logo ? <Logo src={logo} /> : <Title>{title}</Title>}
 
         <Description>
           {children}
@@ -60,25 +63,35 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, children }) => {
         </SkillsContainer>
       </InfoContainer>
       <div style={{ height: 78 }}>
-        <ContactContainer ref={contactContainerRef}>
-          <Link to="/"><img id="profileAvatar" src={ProfileAvatar} alt="" /></Link>
-          <div>
-            <Contact>
-              <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
-                <img src={LinkedinIcon} alt="GitHub Icon" />
-                <span>Linkedin</span>
-                <img src={AccessIcon} alt="" />
-              </a>
-            </Contact>
-            <Contact>
-              <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
-                <img src={GithubIcon} alt="GitHub Icon" />
-                <span>GitHub</span>
-                <img src={AccessIcon} alt="" />
-              </a>
-            </Contact>
-          </div>
-        </ContactContainer>
+        {backArrow ?
+          (
+            <BackToProjectsContainer ref={contactContainerRef}>
+              <Link to="/"><RiArrowLeftSFill size={30} /><span>Back to all projects</span></Link>
+            </BackToProjectsContainer>
+          ) :
+          (
+            <ContactContainer ref={contactContainerRef}>
+              <Link to="/"><img id="profileAvatar" src={ProfileAvatar} alt="" /></Link>
+              <div>
+                <Contact>
+                  <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
+                    <img src={LinkedinIcon} alt="GitHub Icon" />
+                    <span>Linkedin</span>
+                    <img src={AccessIcon} alt="" />
+                  </a>
+                </Contact>
+                <Contact>
+                  <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
+                    <img src={GithubIcon} alt="GitHub Icon" />
+                    <span>GitHub</span>
+                    <img src={AccessIcon} alt="" />
+                  </a>
+                </Contact>
+              </div>
+            </ContactContainer>
+          )
+        }
+
       </div>
 
     </Container>
