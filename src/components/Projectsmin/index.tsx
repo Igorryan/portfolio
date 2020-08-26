@@ -16,12 +16,12 @@ interface IProject {
 
 const projects: IProject[] = [
   {
-    title: 'BrodTi',
+    title: 'BrodTi Static Website',
     uptitle: 'Freelancer',
     local: 'San Francisco ─ California',
     date: 'Aug 13, 2020',
     tags: [
-      'Website'
+      'Web'
     ],
     page: '/brodti'
   },

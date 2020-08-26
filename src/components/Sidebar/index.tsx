@@ -10,7 +10,7 @@ import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg";
 import ProfileAvatar from '../../assets/profile.jpeg';
 import { Link } from 'react-router-dom';
-import { RiArrowLeftSFill } from 'react-icons/ri'
+import { BsArrowLeftShort } from 'react-icons/bs'
 
 
 interface ISideBar {
@@ -62,11 +62,11 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, backArrow, child
           ))}
         </SkillsContainer>
       </InfoContainer>
-      <div style={{ height: 78 }}>
+      <div style={{ height: 68 }}>
         {backArrow ?
           (
             <BackToProjectsContainer ref={contactContainerRef}>
-              <Link to="/"><RiArrowLeftSFill size={30} /><span>Back to all projects</span></Link>
+              <Link to="/"><BsArrowLeftShort size={30} /><span>Back to all projects</span></Link>
             </BackToProjectsContainer>
           ) :
           (

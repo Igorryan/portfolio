@@ -122,15 +122,16 @@ export const BackToProjectsContainer = styled.div`
   width: 100%;
   background: #151515;
 
+
   a {
     display: flex;
     align-items: center;
     color: #fff;
-    text-decoration: none;
     transition: 0.2s;
 
     span {
-      margin-top: 3px;
+      margin-top: 2px;
+      margin-left: 8px;
     }
 
     &:hover {
