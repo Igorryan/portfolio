@@ -40,7 +40,6 @@ export const Logo = styled.img`
 
 export const Description = styled.p`
   margin-top: 30px;
-  margin-bottom: -8px;
 
   font-size: 14px;
   line-height: 28px;
@@ -54,7 +53,7 @@ export const Description = styled.p`
 `
 
 export const SkillsContainer = styled.div`
-  margin-top: 35px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
 
