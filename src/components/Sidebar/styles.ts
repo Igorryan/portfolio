@@ -31,10 +31,10 @@ export const Title = styled.h1`
 `
 
 export const Logo = styled.img`
-  width: 200px;
+  width: 150px;
 
   @media only screen and (max-width: 1300px){
-    width: 200px;
+    width: 150px;
   }
 `
 
