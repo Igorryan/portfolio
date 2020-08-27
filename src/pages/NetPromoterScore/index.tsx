@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import IHardSkills from '../../DTOS/IHardSkills';
 
-import { Container, Image } from './styles';
+import { Container } from './styles';
 import Sidebar from '../../components/Sidebar';
 import Section from '../../components/Section';
 
-import mobile from '../../assets/brodti/mobile.gif';
 import Logo from '../../assets/netpromoterscore/logo.png';
 
 import NodeIcon from '../../assets/icons/node.svg';
 import DockerIcon from '../../assets/icons/docker.svg';
-import PostgresIcon from '../../assets/icons/postgres.svg';
 
 
 const hardSkills: IHardSkills[] = [
