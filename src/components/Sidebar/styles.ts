@@ -40,6 +40,7 @@ export const Logo = styled.img`
 
 export const Description = styled.p`
   margin-top: 30px;
+  margin-bottom: -8px;
 
   font-size: 14px;
   line-height: 28px;
@@ -53,14 +54,14 @@ export const Description = styled.p`
 `
 
 export const SkillsContainer = styled.div`
-  margin-top: 40px;
+  margin-top: 35px;
   display: flex;
   align-items: center;
 
   img {
     margin-right: 10px;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 
   @media only screen and (max-width: 1300px){
@@ -68,8 +69,8 @@ export const SkillsContainer = styled.div`
 
     img{
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     }
 
   }
