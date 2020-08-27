@@ -43,7 +43,7 @@ const projects: IProject[] = [
     tags: [
       'API'
     ],
-    page: ''
+    page: '/nps'
   },
   {
     title: 'University Compartments',

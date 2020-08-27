@@ -58,7 +58,7 @@ export const SkillsContainer = styled.div`
   align-items: center;
 
   img {
-    margin-right: 18px;
+    margin-right: 10px;
     width: 35px;
     height: 35px;
   }

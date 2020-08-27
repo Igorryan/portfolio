@@ -10,6 +10,7 @@ import GlobalStyles from './styles/global';
 
 import Home from "./pages/Home";
 import Brodti from "./pages/Brodti";
+import NetPromoterScore from "./pages/NetPromoterScore";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/brodti">
           <Brodti></Brodti>
+        </Route>
+        <Route path="/nps">
+          <NetPromoterScore></NetPromoterScore>
         </Route>
       </Switch>
     </Router>

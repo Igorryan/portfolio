@@ -10,7 +10,6 @@ import ProjectsMin from '../../components/Projectsmin';
 
 import ReactIcon from '../../assets/icons/react.svg';
 import TypescriptIcon from '../../assets/icons/typescript.svg';
-import NextIcon from '../../assets/icons/nextjs.svg';
 import FigmaIcon from '../../assets/icons/figma.svg';
 
 const hardSkills: IHardSkills[] = [
