@@ -36,17 +36,6 @@ const projects: IProject[] = [
     page: ''
   },
   {
-    title: 'Study Projects and Apps',
-    uptitle: 'Developments',
-    local: 'Belo Horizonte ─ Brazil',
-    date: 'Last in Jun 13, 2020',
-    tags: [
-      'Web',
-      'Mobile',
-    ],
-    page: ''
-  },
-  {
     title: 'Net Promoter Score (NPS)',
     uptitle: 'IGTI',
     local: 'Belo Horizonte ─ Brazil',
