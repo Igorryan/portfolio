@@ -50,7 +50,6 @@ const Brodti: React.FC = () => {
         backArrow
         >
         In this freelancer project, I received the layout of the entire site to develop. I implemented it faithfully and took the opportunity to add an addictive slide show.
-        <br /><a href="https://www.brodti.com/" rel="noopener noreferrer" target="_blank">www.brodti.com</a>
       </Sidebar>
           <Section>
             <Video autoPlay loop muted playsInline>
