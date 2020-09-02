@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Container, Header, Project, Title, Description, TagsContainer, Tag } from './styles';
 
 interface IProject {
-  id: number;
   title: string;
   description: string;
   tags: string[]
@@ -12,11 +11,17 @@ interface IProject {
 
 const projects: IProject[] = [
   {
-    id: 1,
+    title: 'Shaay',
+    description: 'It is a SaaS that aims to provide a modern digital panel for companies to post their notices, rules, announcements and more.',
+    tags: [
+      'Backend', 'Frontend', 'UI Design'
+    ]
+  },
+  {
     title: 'E-commerce Exclusive',
     description: 'The exclusive is an e-commerce for selling clothes with unique prints. A project developed entirely by me.',
     tags: [
-      'Backend', 'Web', 'UI Design'
+      'Backend', 'Frontend', 'UI Design'
     ]
   },
 ]
@@ -40,22 +45,22 @@ const Projectsmax: React.FC = () => {
 
   return (
     <Container>
-        {projects.map(({ id, title, description, tags }, i) => (
+        {projects.map(({title, description, tags }, i) => (
           <motion.div
             whileHover={{ scale: 1.12 }}
-            key={id}
+            key={i}
           >
-            <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(id)} style={{
-              opacity: (focus === id && projectSelected) || noProjectsSelected ? 1 : 0.6,
+            <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(i)} style={{
+              opacity: (focus === i && projectSelected) || noProjectsSelected ? 1 : 0.6,
             }}>
               <Header>
                 <Title>{title}</Title>
-                <span>Online</span>
+                <span>Developing</span>
               </Header>
               <Description>{description}</Description>
-              <TagsContainer key={id}>
-                {tags.map((t, id) => (
-                  <Tag key={id}>{t}</Tag>
+              <TagsContainer key={i}>
+                {tags.map((t, i) => (
+                  <Tag key={i}>{t}</Tag>
                 ))}
               </TagsContainer>
             </Project>

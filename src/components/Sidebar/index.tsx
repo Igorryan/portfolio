@@ -61,6 +61,7 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, backArrow, child
             <img key={skill.icon} data-tip={skill.name} src={skill.icon} alt={skill.name}></img>
           ))}
         </SkillsContainer>
+
       </InfoContainer>
       <div style={{ height: 68 }}>
         {backArrow ?

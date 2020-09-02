@@ -59,8 +59,8 @@ export const SkillsContainer = styled.div`
 
   img {
     margin-right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 
   @media only screen and (max-width: 1300px){
