@@ -53,13 +53,10 @@ const Brodti: React.FC = () => {
       </Sidebar>
           <Section>
             <Video autoPlay loop muted playsInline>
-              <source src={video1} />
+              <source src='https://www.youtube.com/watch?v=omsPSC1DbAI&feature=youtu.be&ab_channel=IgorRyan' />
             </Video>
             <Video autoPlay loop muted playsInline>
-              <source src={video2} />
-            </Video>
-            <Video autoPlay loop muted playsInline>
-              <source src={video3} />
+              <source src='https://www.youtube.com/watch?v=omsPSC1DbAI&feature=youtu.be&ab_channel=IgorRyan' />
             </Video>
             <Image width="100%" src={mobile} alt="mobile screens" />
           </Section>

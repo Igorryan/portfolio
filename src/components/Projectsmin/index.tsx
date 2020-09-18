@@ -26,16 +26,6 @@ const projects: IProject[] = [
     page: '/brodti'
   },
   {
-    title: 'E-commerce integration',
-    uptitle: 'Freelancer',
-    local: 'Santa Catarina ─ Brazil',
-    date: 'Jul 25, 2020',
-    tags: [
-      'Microsservice'
-    ],
-    page: ''
-  },
-  {
     title: 'Net Promoter Score (NPS)',
     uptitle: 'IGTI',
     local: 'Belo Horizonte ─ Brazil',
@@ -54,7 +44,7 @@ const projects: IProject[] = [
       'Javascript',
       'Firebase',
     ],
-    page: ''
+    page: '/pucminas'
   },
 
 ]

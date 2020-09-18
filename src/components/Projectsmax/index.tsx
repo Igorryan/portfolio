@@ -18,10 +18,10 @@ const projects: IProject[] = [
     ]
   },
   {
-    title: 'E-commerce Exclusive',
+    title: 'MyTipLife.com',
     description: 'The exclusive is an e-commerce for selling clothes with unique prints. A project developed entirely by me.',
     tags: [
-      'Backend', 'Frontend', 'UI Design'
+      'Frontend',
     ]
   },
 ]
