@@ -5,6 +5,9 @@ import { Container, Video, Image } from './styles';
 import Sidebar from '../../components/Sidebar';
 import Section from '../../components/Section';
 
+import video1 from '../../assets/brodti/1.mp4';
+import video2 from '../../assets/brodti/2.mp4';
+import video3 from '../../assets/brodti/3.mp4';
 import mobile from '../../assets/brodti/mobile.gif';
 import Logo from '../../assets/brodti/logo_white.svg';
 
@@ -50,10 +53,13 @@ const Brodti: React.FC = () => {
       </Sidebar>
           <Section>
             <Video autoPlay loop muted playsInline>
-              <source src='https://www.youtube.com/watch?v=omsPSC1DbAI&feature=youtu.be&ab_channel=IgorRyan' />
+              <source src={video1} />
             </Video>
             <Video autoPlay loop muted playsInline>
-              <source src='https://www.youtube.com/watch?v=omsPSC1DbAI&feature=youtu.be&ab_channel=IgorRyan' />
+              <source src={video2} />
+            </Video>
+            <Video autoPlay loop muted playsInline>
+              <source src={video3} />
             </Video>
             <Image width="100%" src={mobile} alt="mobile screens" />
           </Section>
