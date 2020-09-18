@@ -5,9 +5,6 @@ import { Container, Video, Image } from './styles';
 import Sidebar from '../../components/Sidebar';
 import Section from '../../components/Section';
 
-import video1 from '../../assets/brodti/1.mp4';
-import video2 from '../../assets/brodti/2.mp4';
-import video3 from '../../assets/brodti/3.mp4';
 import mobile from '../../assets/brodti/mobile.gif';
 import Logo from '../../assets/brodti/logo_white.svg';
 
