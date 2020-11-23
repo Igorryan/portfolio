@@ -1,52 +1,55 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useMemo } from 'react';
 import { motion } from "framer-motion";
-import { useHistory } from "react-router-dom";
+import AccessIcon from "../../assets/icons/access.svg";
 
-import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data } from './styles';
+import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data, Access } from './styles';
 
 interface IProject {
   title: string;
   uptitle: string;
   local: string;
-  date: string;
+  date: Date;
   tags: string[];
-  page: string;
+  link: string;
+  linkLabel: string
 }
 
 
 const projects: IProject[] = [
   {
-    title: 'BrodTi Static Website',
+    title: 'BrodTi Website',
     uptitle: 'Freelancer',
     local: 'San Francisco ─ California',
-    date: 'Aug 13, 2020',
+    date: new Date(2020, 7, 13),
     tags: [
       'Web'
     ],
-    page: '/brodti'
+    link: 'https://github.com/Igorryan/brodti',
+    linkLabel: 'GitHub'
   },
   {
     title: 'Net Promoter Score (NPS)',
     uptitle: 'IGTI',
     local: 'Belo Horizonte ─ Brazil',
-    date: 'Apr 14, 2020',
+    date: new Date(2020, 3, 14),
     tags: [
       'API'
     ],
-    page: '/nps'
+    link: 'https://github.com/Igorryan/nps-igti',
+    linkLabel: 'GitHub'
   },
   {
     title: 'University Compartments',
     uptitle: 'PUC MINAS',
     local: 'Belo Horizonte ─ Brazil',
-    date: 'Feb 11, 2019',
+    date: new Date(2019, 1, 11),
     tags: [
       'Javascript',
       'Firebase',
     ],
-    page: '/pucminas'
+    link: 'https://github.com/Igorryan/escaninhos-pucminas',
+    linkLabel: 'GitHub'
   },
-
 ]
 
 
@@ -56,7 +59,10 @@ const Projectsmin: React.FC = () => {
   const [focus, setFocus] = useState<number>();
   const [noProjectsSelected, setNoProjectsSelected] = useState<boolean>(true);
 
-  const history = useHistory();
+  const projectsSortByDate = useMemo(() => {
+    return projects.slice().sort((a, b) =>  b.date.getTime() - a.date.getTime())
+  }, [])
+
 
   const handleSelectedProject = useCallback((id: number) => {
     setFocus(id);
@@ -69,32 +75,42 @@ const Projectsmin: React.FC = () => {
     setNoProjectsSelected(true);
   }, []);
 
-  const handleNavigateToProject = useCallback((page) => {
-    history.push(page)
-  }, [history])
+  const transformFormatDate = useCallback((date: Date): string => {
+      const [, month, day, year] = date.toDateString().split(' ');
+
+      return `${month} ${day}, ${year}`
+  }, [])
 
   return (
     <Container>
 
-      {projects.map(({ uptitle, title, local, date, tags, page }, i) => (
+      {projectsSortByDate.map(({ uptitle, title, local, date, tags, link,linkLabel }, i) => (
         <motion.div
-          whileHover={{ scale: 1.12 }}
+          whileHover={window.innerWidth > 1100 ? { scale: 1.1 } : { scale: 1 }}
           key={i}
         >
-          <Project onClick={() => { handleNavigateToProject(page) }} onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(i)} style={{
+          <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(i)} style={{
             opacity: (focus === i && projectSelected) || noProjectsSelected ? 1 : 0.6,
-            // marginTop: i % 2 !== 0 ? 25 : 0,
-            // marginBottom: i % 2 !== 0 ? -16 : 0,
+            marginTop: i % 2 !== 0 && window.innerWidth > 1100 ? 25 : 0,
+            marginBottom: i % 2 !== 0 && window.innerWidth > 1100 ? -16 : 0,
           }}>
             <UpTitle>{uptitle.toUpperCase()}</UpTitle>
             <Local>{local}</Local>
-            <Data>{date}</Data>
+        <Data>{transformFormatDate(date)}</Data>
             <TagsContainer key={i}>{tags.map((t, id) => (
               <Tag key={id}>{t}</Tag>
             ))}</TagsContainer>
             <Title>
               {title}
             </Title>
+
+            <Access>
+                  <a href={link} rel="noopener noreferrer" target="_blank">
+                    <span>{linkLabel}</span>
+                    <img src={AccessIcon} alt="" />
+                  </a>
+            </Access>
+
           </Project>
 
         </motion.div>

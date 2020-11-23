@@ -7,12 +7,17 @@ export const Container = styled.div`
   font-family: 'Gothic A1', sans-serif;
   height: 100%;
 
+  @media only screen and (max-width: 1350px){
+    width:100vw;
+    margin: 25px;
+  }
+
   @media only screen and (max-width: 1630px){
     width:80vw;
   }
 
-  @media only screen and (max-width: 1300px){
-    width:88vw;
+  @media only screen and (max-width: 1100px){
+    width:  88vw;
     margin: 35px auto;
   }
 `;

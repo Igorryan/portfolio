@@ -5,7 +5,6 @@ import IHardSkills from '../../DTOS/IHardSkills';
 
 import Sidebar from '../../components/Sidebar';
 import Section from '../../components/Section';
-import ProjectsMax from '../../components/Projectsmax';
 import ProjectsMin from '../../components/Projectsmin';
 
 import ReactIcon from '../../assets/icons/react.svg';
@@ -34,12 +33,11 @@ const Home: React.FC = () => {
       <Sidebar
         title='Hi, I’m Igor Ryan.'
         hardSkills={hardSkills}>
-        I am a software engineering student and currently do internship at <a href="https://www.igti.com.br/" rel="noopener noreferrer" target="_blank">
-          Institute of the technology</a> and work as a freelance fullstack developer mainly in <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS </a>,
-        and <a href="https://nextjs.org/" rel="noopener noreferrer" target="_blank">NextJS</a>. I'm a CSS nerd and I also venture into the user interface design.
+          I am a technology student and work as a freelance developer,
+          my vocation is <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS</a>, <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">Next.js</a> and <a href="https://reactnative.dev" rel="noopener noreferrer" target="_blank">React Native</a>. I'm a CSS nerd and I love talking about code, UI / UX and motions.
       </Sidebar>
       <Section>
-        <ProjectsMax />
+        {/* <ProjectsMax /> */}
         <ProjectsMin />
       </Section>
     </Container>

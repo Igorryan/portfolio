@@ -4,18 +4,18 @@ export const Container = styled.section`
    display: flex;
    flex-wrap:wrap;
    margin-bottom: 5%;
-   margin-top: 50px;
 
-   @media only screen and (max-width: 1300px){
+   @media only screen and (max-width: 1100px){
      flex-wrap: initial;
      flex-direction: column;
    }
 `;
 
 export const Project = styled.article`
+  position: relative;
+
   height: 338px;
   width: 328px;
-  cursor: pointer;
 
   margin-bottom: 8px;
   margin-left: 8px;
@@ -24,11 +24,10 @@ export const Project = styled.article`
   overflow: hidden;
   transition: 0.1s;
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
     width: auto;
     height: auto;
-    margin-left: 0;
-
+    margin: 5px 20px !important;
    }
 `
 
@@ -54,10 +53,10 @@ export const TagsContainer = styled.div`
   display: flex;
   align-items: center;
 
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 18px;
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
     margin-top: 30px;
   }
 
@@ -80,3 +79,27 @@ export const Title = styled.h1`
   line-height: 1.3em;
 `
 
+export const Access = styled.div`
+
+  position: absolute;
+  bottom: 30px;
+  right: 35px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #fff;
+
+    span {
+      margin-right: 20px;
+    }
+
+    img {
+      width: 18px;
+      margin-top: -4px;
+    }
+  }
+
+`

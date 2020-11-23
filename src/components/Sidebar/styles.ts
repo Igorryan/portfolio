@@ -8,7 +8,7 @@ export const Container = styled.aside`
   width: 410px;
   height: 100%;
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
     position: relative;
     width: 100%;
   }
@@ -25,7 +25,7 @@ export const Title = styled.h1`
   color: #FFF;
   width: 300px;
 
-  @media only screen and (min-width: 825px) and (max-width: 1300px){
+  @media only screen and (min-width: 825px) and (max-width: 1100px){
     width: auto;
   }
 `
@@ -33,7 +33,7 @@ export const Title = styled.h1`
 export const Logo = styled.img`
   width: 150px;
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
     width: 150px;
   }
 `
@@ -44,6 +44,10 @@ export const Description = styled.p`
   font-size: 14px;
   line-height: 28px;
   color: #949495;
+
+  @media (min-width: 1100px){
+    width: 400px;
+  }
 
   a {
     color: #fff;
@@ -63,7 +67,7 @@ export const SkillsContainer = styled.div`
     height: 35px;
   }
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
     margin: 30px 0 30px;
 
     img{
@@ -82,10 +86,16 @@ export const ContactContainer = styled.div`
   position: absolute;
   bottom: 100px;
   width: 100%;
+
+  @media (max-width: 1350px){
+      bottom:40px;
   background: #151515;
+
+    }
 
   div {
     display: flex;
+
 
     @media only screen and (max-width: 390px){
       display: block;
@@ -100,7 +110,7 @@ export const ContactContainer = styled.div`
     margin-top: -10px;
   }
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
   position: relative;
   bottom: 0;
   justify-content: space-between;
@@ -148,7 +158,7 @@ export const BackToProjectsContainer = styled.div`
   }
 
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
   position: relative;
   bottom: 0;
   justify-content: space-between;
@@ -177,7 +187,7 @@ export const Contact = styled.footer`
 
   }
 
-  @media only screen and (max-width: 1300px){
+  @media only screen and (max-width: 1100px){
     font-size: 14px;
     a {
       margin-top: 4px;

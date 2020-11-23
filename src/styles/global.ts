@@ -13,6 +13,8 @@ body {
   background: #151515;
   color: #fff;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden !important;
+
 }
 
 body, input, button{
