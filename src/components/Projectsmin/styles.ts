@@ -26,6 +26,7 @@ export const Project = styled.article`
 
   @media only screen and (max-width: 1100px){
     width: auto;
+    min-height: 300px;
     height: auto;
     margin: 5px 20px !important;
    }
