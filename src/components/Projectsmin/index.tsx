@@ -17,23 +17,26 @@ interface IProject {
 
 const projects: IProject[] = [
   {
-    title: 'BrodTi Website',
+    title: 'BrodTi',
     uptitle: 'Freelancer',
     local: 'San Francisco ─ California',
-    date: new Date(2020, 7, 13),
+    date: new Date(2020, 7, 9),
     tags: [
-      'Web'
+      'HTML',
+      'CSS',
+      'JavaScript',
     ],
-    link: 'https://github.com/Igorryan/brodti',
-    linkLabel: 'GitHub'
+    link: 'http://brodti.com',
+    linkLabel: 'Website'
   },
   {
-    title: 'Net Promoter Score (NPS)',
+    title: 'API Net Promoter Score (NPS)',
     uptitle: 'IGTI',
     local: 'Belo Horizonte ─ Brazil',
     date: new Date(2020, 3, 14),
     tags: [
-      'API'
+      'Node.js',
+      'Docker',
     ],
     link: 'https://github.com/Igorryan/nps-igti',
     linkLabel: 'GitHub'
@@ -49,6 +52,68 @@ const projects: IProject[] = [
     ],
     link: 'https://github.com/Igorryan/escaninhos-pucminas',
     linkLabel: 'GitHub'
+  },
+  {
+    title: 'MyTipLife E-commerce',
+    uptitle: 'Freelancer',
+    local: 'San Francisco ─ California',
+    date: new Date(2020, 11, 1),
+    tags: [
+      'Frontend',
+      'Next.js',
+    ],
+    link: 'https://mytiplife.vercel.app',
+    linkLabel: 'Application'
+  },
+  {
+    title: 'Mayor Gandini23',
+    uptitle: 'Freelancer',
+    local: 'Vitória ─ Brazil',
+    date: new Date(2020, 7, 24),
+    tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+    ],
+    link: 'https://www.gandini23.com.br',
+    linkLabel: 'Website'
+  },
+  {
+    title: 'Go Barber',
+    uptitle: 'Study Project',
+    local: 'Online ─ Rocketseat',
+    date: new Date(2020, 6, 8),
+    tags: [
+      'ReactJS | Native',
+      'Node.js',
+    ],
+    link: 'https://github.com/Igorryan/gobarber',
+    linkLabel: 'GitHub'
+  },
+  {
+    title: 'Apps Clones',
+    uptitle: 'Study Project',
+    local: 'Sete Lagoas - Brazil',
+    date: new Date(2020, 6, 13),
+    tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+    ],
+    link: 'https://github.com/Igorryan/apps-clones',
+    linkLabel: 'GitHub'
+  },
+  {
+    title: 'Exclusive E-commerce',
+    uptitle: 'Freelancer',
+    local: 'Sete Lagoas - Brazil',
+    date: new Date(2020, 4, 6),
+    tags: [
+      'UX | UI Design',
+      'Web Design'
+    ],
+    link: 'https://www.figma.com/file/0vaggidrXGW9T5bvgfmuq5/Exclusive-Web-Plataform?node-id=0%3A1',
+    linkLabel: 'Figma'
   },
 ]
 

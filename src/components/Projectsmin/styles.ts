@@ -71,12 +71,15 @@ export const Tag = styled.div`
   border-radius: 100px;
   padding: 0px 15px;
   padding-top: 1.5px;
+  max-height: 26px;
+  word-break: keep-all;
 `
 
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: 700;
   line-height: 1.3em;
+  word-break: keep-all;
 `
 
 export const Access = styled.div`
@@ -93,7 +96,7 @@ export const Access = styled.div`
     color: #fff;
 
     span {
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     img {
