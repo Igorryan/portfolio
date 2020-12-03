@@ -1,28 +1,29 @@
-import React, { useEffect, useCallback, useState, useRef } from 'react';
+import React, { useEffect, useCallback, useState, useRef, useMemo } from 'react';
 import { Container, InfoContainer, Title, Logo, Description, SkillsContainer, ContactContainer, BackToProjectsContainer, Contact } from './styles';
 
-import IHardSkills from '../../DTOS/IHardSkills';
+import ISkills from '../../DTOS/ISkills';
 import $ from 'jquery';
 import ReactTooltip from 'react-tooltip';
 
 import GithubIcon from "../../assets/icons/github.svg";
 import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg";
-import ProfileAvatar from '../../assets/profile.jpeg';
+import ProfileAvatar from '../../assets/img/profile.jpeg';
+import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
+
 import { Link } from 'react-router-dom';
-import { BsArrowLeftShort } from 'react-icons/bs'
 
 
 interface ISideBar {
   title: string;
-  hardSkills: IHardSkills[];
-  logo?: string;
-  backArrow?: boolean;
+  skills: ISkills[];
 }
 
-const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, backArrow, children }) => {
+const Sidebar: React.FC<ISideBar> = ({ title, skills, children }) => {
   const contactContainerRef = useRef<HTMLDivElement>(null);
   const [contactPositionScroll, setContactPositionScroll] = useState<boolean>();
+  const [seeItAll, setSeeItAll] = useState(false);
+  const visibleSkillsQuantity = 5;
 
   useEffect(() => {
     window.addEventListener('scroll', verifyScroll);
@@ -45,53 +46,82 @@ const Sidebar: React.FC<ISideBar> = ({ logo, title, hardSkills, backArrow, child
     }
   }, [contactPositionScroll]);
 
+  const developmentSkills = useMemo(() => {
+    return skills.filter(s => s.category === 'development')
+  }, [skills])
+
+  const designSkills = useMemo(() => {
+    return skills.filter(s => s.category === 'design')
+  }, [skills])
+
   return (
     <Container>
       <ReactTooltip place='top' effect="solid" />
 
       <InfoContainer>
-        {logo ? <Logo src={logo} /> : <Title>{title}</Title>}
+        <Title>{title}</Title>
 
         <Description>
           {children}
         </Description>
 
         <SkillsContainer>
-          {hardSkills.map(skill => (
-            <img key={skill.icon} data-tip={skill.name} src={skill.icon} alt={skill.name}></img>
+          {developmentSkills.map((skill, i) => (
+            <img
+              style={{
+                display: i < visibleSkillsQuantity || seeItAll ? 'block' : 'none',
+                animationDelay: i >= visibleSkillsQuantity ? `${(i-visibleSkillsQuantity) / 5}s` : `${i / visibleSkillsQuantity}s`
+              }}
+              key={skill.icon}
+              data-tip={skill.name}
+              src={skill.icon}
+              alt={skill.name}></img>
           ))}
         </SkillsContainer>
 
+        <SkillsContainer style={{ display: seeItAll ? 'block' : 'none' }}>
+          {designSkills.map((skill, i) => (
+            <img
+              style={{
+                animationDelay: `${(i + developmentSkills.length - visibleSkillsQuantity) / 5}s`
+              }}
+              key={skill.icon}
+              data-tip={skill.name}
+              src={skill.icon}
+              alt={skill.name}></img>
+          ))}
+
+        </SkillsContainer>
+
+        <button onClick={() => setSeeItAll(!seeItAll)}>{seeItAll ? (<>view less<FaCaretUp /></>) : (<>view more<FaCaretDown /></>)}</button>
+
+
+
+
+
+
       </InfoContainer>
       <div style={{ height: 68 }}>
-        {backArrow ?
-          (
-            <BackToProjectsContainer ref={contactContainerRef}>
-              <Link to="/"><BsArrowLeftShort size={30} /><span>Back to all projects</span></Link>
-            </BackToProjectsContainer>
-          ) :
-          (
-            <ContactContainer ref={contactContainerRef}>
-              <Link to="/"><img id="profileAvatar" src={ProfileAvatar} alt="" /></Link>
-              <div>
-                <Contact>
-                  <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
-                    <img src={LinkedinIcon} alt="GitHub Icon" />
-                    <span>Linkedin</span>
-                    <img src={AccessIcon} alt="" />
-                  </a>
-                </Contact>
-                <Contact>
-                  <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
-                    <img src={GithubIcon} alt="GitHub Icon" />
-                    <span>GitHub</span>
-                    <img src={AccessIcon} alt="" />
-                  </a>
-                </Contact>
-              </div>
-            </ContactContainer>
-          )
-        }
+
+        <ContactContainer ref={contactContainerRef}>
+          <Link to="/"><img id="profileAvatar" src={ProfileAvatar} alt="" /></Link>
+          <div>
+            <Contact>
+              <a href="https://www.linkedin.com/in/igorryan/" rel="noopener noreferrer" target="_blank">
+                <img src={LinkedinIcon} alt="GitHub Icon" />
+                <span>Linkedin</span>
+                <img src={AccessIcon} alt="" />
+              </a>
+            </Contact>
+            <Contact>
+              <a href="https://github.com/Igorryan" rel="noopener noreferrer" target="_blank">
+                <img src={GithubIcon} alt="GitHub Icon" />
+                <span>GitHub</span>
+                <img src={AccessIcon} alt="" />
+              </a>
+            </Contact>
+          </div>
+        </ContactContainer>
 
       </div>
 

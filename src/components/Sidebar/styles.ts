@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotateIn2Cw = keyframes`
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+`
+
 
 export const Container = styled.aside`
   position: fixed;
@@ -15,7 +27,38 @@ export const Container = styled.aside`
 `;
 
 export const InfoContainer = styled.div`
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    color: #A5A5A5;
+    font-size: 14px;
+
+    transition: color 0.2s;
+    margin-bottom: 30px;
+
+    svg {
+      margin-top: -3px;
+      margin-left: 6px;
+      width: 17px;
+      height: 17px;
+    }
+
+    :hover {
+      color: #fbfbfb;
+    }
+
+    @media only screen and (max-width: 1100px){
+      margin-bottom: 50px;
+  }
+
+  }
 `
 
 export const Title = styled.h1`
@@ -60,22 +103,22 @@ export const SkillsContainer = styled.div`
   margin-top: 40px;
   display: flex;
   align-items: center;
+  max-width: 340px;
+  flex-wrap: wrap;
+  position: relative;
 
   img {
     margin-right: 10px;
-    width: 35px;
-    height: 35px;
-  }
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
 
-  @media only screen and (max-width: 1100px){
-    margin: 30px 0 30px;
+    animation: ${rotateIn2Cw} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-    img{
-    margin-right: 10px;
-    width: 35px;
-    height: 35px;
+    &:hover {
+      transform: scale(1.1);
     }
-
   }
 `
 
