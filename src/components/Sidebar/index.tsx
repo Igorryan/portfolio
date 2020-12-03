@@ -79,7 +79,7 @@ const Sidebar: React.FC<ISideBar> = ({ title, skills, children }) => {
           ))}
         </SkillsContainer>
 
-        <SkillsContainer style={{ display: seeItAll ? 'block' : 'none' }}>
+        <SkillsContainer style={{ display: seeItAll ? 'flex' : 'none' }}>
           {designSkills.map((skill, i) => (
             <img
               style={{

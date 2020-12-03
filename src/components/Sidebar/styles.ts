@@ -114,11 +114,11 @@ export const SkillsContainer = styled.div`
     margin-bottom: 10px;
     transition: all 0.2s;
 
-    animation: ${rotateIn2Cw} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
     &:hover {
-      transform: scale(1.1);
+      margin-top: -6px;
     }
+
+    animation: ${rotateIn2Cw} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 `
 
