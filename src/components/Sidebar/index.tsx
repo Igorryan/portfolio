@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState, useRef, useMemo } from 'react';
-import { Container, InfoContainer, Title, Logo, Description, SkillsContainer, ContactContainer, BackToProjectsContainer, Contact } from './styles';
+import { Container, InfoContainer, Title, Description, SkillsContainer, ContactContainer, Contact } from './styles';
 
 import ISkills from '../../DTOS/ISkills';
 import $ from 'jquery';

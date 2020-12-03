@@ -73,14 +73,6 @@ export const Title = styled.h1`
   }
 `
 
-export const Logo = styled.img`
-  width: 150px;
-
-  @media only screen and (max-width: 1100px){
-    width: 150px;
-  }
-`
-
 export const Description = styled.p`
   margin-top: 30px;
 
@@ -163,48 +155,6 @@ export const ContactContainer = styled.div`
     width: 45px;
     height: 45px;
   }
-  }
-`
-
-export const BackToProjectsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  left: 0;
-  position: absolute;
-  bottom: 100px;
-  width: 100%;
-  background: #151515;
-
-
-  a {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    transition: 0.2s;
-
-    span {
-      margin-top: 2px;
-      margin-left: 8px;
-    }
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  div {
-    display: flex;
-
-    @media only screen and (max-width: 390px){
-      display: block;
-    }
-  }
-
-
-  @media only screen and (max-width: 1100px){
-  position: relative;
-  bottom: 0;
-  justify-content: space-between;
   }
 `
 
