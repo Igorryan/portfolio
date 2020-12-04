@@ -15,10 +15,10 @@ import Node from '../../assets/icons/node.svg';
 import GraphQL from '../../assets/icons/graphql.svg';
 import JQuery from '../../assets/icons/jquery.svg';
 import MongoDB from '../../assets/icons/mongodb.svg';
-import PostgreSQL from '../../assets/icons/postgresql.svg';
+import PostgreSQL from '../../assets/icons/postgresqlv2.svg';
 import Docker from '../../assets/icons/docker.svg';
-import CorelDraw from '../../assets/icons/coreldraw.svg';
-import Photoshop from '../../assets/icons/photoshop.svg';
+import CorelDraw from '../../assets/icons/coreldrawv2.svg';
+import Photoshop from '../../assets/icons/photoshopv2.svg';
 
 import Figma from '../../assets/icons/figma.svg';
 
