@@ -103,11 +103,6 @@ const Sidebar: React.FC<ISideBar> = ({ title, skills, children }) => {
 
         <button onClick={() => setSeeItAll(!seeItAll)}>{seeItAll ? (<>view less<FaCaretUp /></>) : (<>view more<FaCaretDown /></>)}</button>
 
-
-
-
-
-
       </InfoContainer>
       <div style={{ height: 68 }}>
 

@@ -42,6 +42,7 @@ export const InfoContainer = styled.div`
 
     transition: color 0.2s;
     margin-bottom: 30px;
+    margin-top:5px;
 
     svg {
       margin-top: -3px;
