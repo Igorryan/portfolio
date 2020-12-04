@@ -24,12 +24,20 @@ const Sidebar: React.FC<ISideBar> = ({ title, skills, children }) => {
   const [contactPositionScroll, setContactPositionScroll] = useState<boolean>();
   const [seeItAll, setSeeItAll] = useState(false);
   const visibleSkillsQuantity = 5;
+  const [distanceContact, setDistanceContact] = useState(0);
 
   useEffect(() => {
     window.addEventListener('scroll', verifyScroll);
   });
 
   const verifyScroll = useCallback(() => {
+
+    const distance = contactContainerRef.current?.offsetTop || 0
+
+    if(distance !== 0){
+      setDistanceContact(distance)
+    }
+
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
       if (!contactPositionScroll) {
         const windowSize = $(window).width();
@@ -40,11 +48,11 @@ const Sidebar: React.FC<ISideBar> = ({ title, skills, children }) => {
           setContactPositionScroll(true)
         }
       };
-    } else if (window.scrollY <= 369 && !contactPositionScroll) {
+    } else if (window.scrollY <= distanceContact && !contactPositionScroll) {
       contactContainerRef.current?.classList.remove('headerFixed')
       setContactPositionScroll(false);
     }
-  }, [contactPositionScroll]);
+  }, [contactPositionScroll, distanceContact]);
 
   const developmentSkills = useMemo(() => {
     return skills.filter(s => s.category === 'development')
