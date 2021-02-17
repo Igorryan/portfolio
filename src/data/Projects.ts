@@ -79,7 +79,7 @@ const Projects: IProject[] = [
       'Frontend',
       'Next.js',
     ],
-    link: 'https://mytiplife.vercel.app',
+    link: 'https://store.mytiplife.com/',
     linkLabel: 'Application'
   },
   {
