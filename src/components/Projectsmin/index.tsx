@@ -2,121 +2,9 @@ import React, { useCallback, useState, useMemo } from 'react';
 import { motion } from "framer-motion";
 import AccessIcon from "../../assets/icons/access.svg";
 
+import Projets from  '../../data/Projects'
+
 import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data, Access } from './styles';
-
-interface IProject {
-  title: string;
-  uptitle: string;
-  local: string;
-  date: Date;
-  tags: string[];
-  link: string;
-  linkLabel: string
-}
-
-
-const projects: IProject[] = [
-  {
-    title: 'BrodTi',
-    uptitle: 'Freelancer',
-    local: 'San Francisco ─ California',
-    date: new Date(2020, 7, 9),
-    tags: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-    ],
-    link: 'http://brodti.com',
-    linkLabel: 'Website'
-  },
-  {
-    title: 'API Net Promoter Score (NPS)',
-    uptitle: 'IGTI',
-    local: 'Belo Horizonte ─ Brazil',
-    date: new Date(2020, 3, 14),
-    tags: [
-      'Node.js',
-      'Docker',
-    ],
-    link: 'https://github.com/Igorryan/nps-igti',
-    linkLabel: 'GitHub'
-  },
-  {
-    title: 'University Compartments',
-    uptitle: 'PUC MINAS',
-    local: 'Belo Horizonte ─ Brazil',
-    date: new Date(2019, 1, 11),
-    tags: [
-      'Javascript',
-      'Firebase',
-    ],
-    link: 'https://github.com/Igorryan/escaninhos-pucminas',
-    linkLabel: 'GitHub'
-  },
-  {
-    title: 'MyTipLife E-commerce',
-    uptitle: 'Freelancer',
-    local: 'San Francisco ─ California',
-    date: new Date(2020, 11, 1),
-    tags: [
-      'Frontend',
-      'Next.js',
-    ],
-    link: 'https://mytiplife.vercel.app',
-    linkLabel: 'Application'
-  },
-  {
-    title: 'Mayor Gandini23',
-    uptitle: 'Freelancer',
-    local: 'Vitória ─ Brazil',
-    date: new Date(2020, 7, 24),
-    tags: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-    ],
-    link: 'https://www.gandini23.com.br',
-    linkLabel: 'Website'
-  },
-  {
-    title: 'Go Barber',
-    uptitle: 'Study Project',
-    local: 'Online ─ Rocketseat',
-    date: new Date(2020, 6, 8),
-    tags: [
-      'ReactJS | Native',
-      'Node.js',
-    ],
-    link: 'https://github.com/Igorryan/gobarber',
-    linkLabel: 'GitHub'
-  },
-  {
-    title: 'Apps Clones',
-    uptitle: 'Study Project',
-    local: 'Sete Lagoas - Brazil',
-    date: new Date(2020, 6, 13),
-    tags: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-    ],
-    link: 'https://github.com/Igorryan/apps-clones',
-    linkLabel: 'GitHub'
-  },
-  {
-    title: 'Exclusive E-commerce',
-    uptitle: 'Freelancer',
-    local: 'Sete Lagoas - Brazil',
-    date: new Date(2020, 4, 6),
-    tags: [
-      'UX | UI Design',
-      'Web Design'
-    ],
-    link: 'https://www.figma.com/file/0vaggidrXGW9T5bvgfmuq5/Exclusive-Web-Plataform?node-id=0%3A1',
-    linkLabel: 'Figma'
-  },
-]
-
 
 const Projectsmin: React.FC = () => {
 
@@ -125,7 +13,7 @@ const Projectsmin: React.FC = () => {
   const [noProjectsSelected, setNoProjectsSelected] = useState<boolean>(true);
 
   const projectsSortByDate = useMemo(() => {
-    return projects.slice().sort((a, b) =>  b.date.getTime() - a.date.getTime())
+    return Projets.slice().sort((a, b) =>  b.date.getTime() - a.date.getTime())
   }, [])
 
 

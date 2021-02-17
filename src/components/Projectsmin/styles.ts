@@ -23,6 +23,7 @@ export const Project = styled.article`
   padding: 40px ;
   overflow: hidden;
   transition: 0.1s;
+  cursor: pointer;
 
   @media only screen and (max-width: 1100px){
     width: auto;
