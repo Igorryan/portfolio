@@ -76,7 +76,6 @@ const Projects: IProject[] = [
     local: 'San Francisco ─ California',
     date: new Date(2020, 11, 1),
     tags: [
-      'Frontend',
       'Next.js',
     ],
     link: 'https://store.mytiplife.com/',
@@ -125,9 +124,8 @@ const Projects: IProject[] = [
     local: 'Sete Lagoas - Brazil',
     date: new Date(2020, 6, 13),
     tags: [
-      'HTML',
-      'CSS',
-      'JavaScript',
+      'Sass',
+      'React Native',
     ],
     link: 'https://github.com/Igorryan/apps-clones',
     linkLabel: 'GitHub'
