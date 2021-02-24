@@ -6,12 +6,12 @@ export const Container = styled.div`
   padding-bottom: 40px;
 
 
-  @media only screen and (max-width: 1350px){
+  @media only screen and (max-width: 1395px){
   position: absolute;
   right: 10px;
   }
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
     float: none;
     width: 100%;
   right: 0px;

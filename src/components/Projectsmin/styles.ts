@@ -5,7 +5,7 @@ export const Container = styled.section`
    flex-wrap:wrap;
    margin-bottom: 5%;
 
-   @media only screen and (max-width: 1100px){
+   @media only screen and (max-width: 1170px){
      flex-wrap: initial;
      flex-direction: column;
    }
@@ -25,7 +25,7 @@ export const Project = styled.article`
   transition: 0.1s;
   cursor: pointer;
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
     width: auto;
     min-height: 300px;
     height: auto;
@@ -34,7 +34,7 @@ export const Project = styled.article`
 `
 
 export const UpTitle = styled.p`
-  font-weight: 600;
+  font-weight: 900;
   font-size: 12px;
   letter-spacing: 0.2em;
 `
@@ -58,7 +58,7 @@ export const TagsContainer = styled.div`
   margin-top: 40px;
   margin-bottom: 18px;
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
     margin-top: 30px;
   }
 

@@ -7,7 +7,7 @@ export const Container = styled.div`
   font-family: 'Gothic A1', sans-serif;
   height: 100%;
 
-  @media only screen and (max-width: 1350px){
+  @media only screen and (max-width: 1395px){
     width:100vw;
     margin: 25px;
   }
@@ -16,7 +16,7 @@ export const Container = styled.div`
     width:80vw;
   }
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
     width:  88vw;
     margin: 35px auto;
   }

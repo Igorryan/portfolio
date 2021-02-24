@@ -20,7 +20,7 @@ export const Container = styled.aside`
   width: 410px;
   height: 100%;
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
     position: relative;
     width: 100%;
   }
@@ -55,7 +55,7 @@ export const InfoContainer = styled.div`
       color: #fbfbfb;
     }
 
-    @media only screen and (max-width: 1100px){
+    @media only screen and (max-width: 1170px){
       margin-bottom: 50px;
   }
 
@@ -69,24 +69,25 @@ export const Title = styled.h1`
   color: #FFF;
   width: 300px;
 
-  @media only screen and (min-width: 825px) and (max-width: 1100px){
+  @media only screen and (min-width: 825px) and (max-width: 1170px){
     width: auto;
   }
 `
 
 export const Description = styled.p`
   margin-top: 30px;
-
-  font-size: 14px;
+  font-family: "Gothic A1", -apple-system, system-ui, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
   line-height: 28px;
-  color: #949495;
+  color: rgba(148,148,149);
 
-  @media (min-width: 1100px){
-    width: 400px;
+  @media (min-width: 1170px){
+    width: 440px;
   }
 
   a {
     color: #fff;
+    font-weight:500;
     text-decoration: underline;
   }
 
@@ -123,16 +124,13 @@ export const ContactContainer = styled.div`
   bottom: 100px;
   width: 100%;
 
-  @media (max-width: 1350px){
+  @media (max-width: 1395px){
       bottom:40px;
-  background: #151515;
-
+      background: #151515;
     }
 
   div {
     display: flex;
-
-
     @media only screen and (max-width: 390px){
       display: block;
     }
@@ -146,7 +144,7 @@ export const ContactContainer = styled.div`
     margin-top: -10px;
   }
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
   position: relative;
   bottom: 0;
   justify-content: space-between;
@@ -181,7 +179,7 @@ export const Contact = styled.footer`
 
   }
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1170px){
     font-size: 14px;
     a {
       margin-top: 4px;

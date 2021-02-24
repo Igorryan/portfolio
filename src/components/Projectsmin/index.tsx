@@ -39,13 +39,13 @@ const Projectsmin: React.FC = () => {
 
       {projectsSortByDate.map(({ uptitle, title, local, date, tags, link,linkLabel }, i) => (
         <motion.div
-          whileHover={window.innerWidth > 1100 ? { scale: 1.1 } : { scale: 1 }}
+          whileHover={window.innerWidth > 1170 ? { scale: 1.1 } : { scale: 1 }}
           key={i}
         >
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(i)} style={{
             opacity: (focus === i && projectSelected) || noProjectsSelected ? 1 : 0.6,
-            marginTop: i % 2 !== 0 && window.innerWidth > 1100 ? 25 : 0,
-            marginBottom: i % 2 !== 0 && window.innerWidth > 1100 ? -16 : 0,
+            marginTop: i % 2 !== 0 && window.innerWidth > 1170 ? 25 : 0,
+            marginBottom: i % 2 !== 0 && window.innerWidth > 1170 ? -16 : 0,
           }}>
             <UpTitle>{uptitle.toUpperCase()}</UpTitle>
             <Local>{local}</Local>

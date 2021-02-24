@@ -35,13 +35,13 @@ const Sidebar: React.FC = ({ children }) => {
     if (contactContainerRef.current?.offsetTop && window.scrollY >= contactContainerRef.current?.offsetTop + 200) {
       if (!contactPositionScroll) {
         const windowSize = $(window).width();
-        if (windowSize && windowSize < 1400) {
+        if (windowSize && windowSize < 1170) {
           contactContainerRef.current?.classList.add('headerFixed');
           $(contactContainerRef.current).hide();
           $(contactContainerRef.current).slideDown(200);
           setContactPositionScroll(true)
         }
-      };
+      }
     } else if (window.scrollY <= distanceContact && !contactPositionScroll) {
       contactContainerRef.current?.classList.remove('headerFixed')
       setContactPositionScroll(false);
