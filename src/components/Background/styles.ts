@@ -13,19 +13,6 @@ const animStar = keyframes`
   }
 `
 
-// const graviting = keyframes`
-//   from {
-//     -webkit-transform: translateY(-2rem);
-//     -ms-transform: translateY(-2rem);
-//     transform: translateY(-2rem);
-//   }
-//   to {
-//     -webkit-transform: translateY(2rem);
-//     -ms-transform: translateY(2rem);
-//     transform: translateY(2rem);
-//   }
-// `
-
 const comets = keyframes`
   from {
     -webkit-transform: translateX(-1rem);
@@ -33,9 +20,9 @@ const comets = keyframes`
     transform: translateX(-1rem);
   }
   to {
-    -webkit-transform: translateX(110vw);
-    -ms-transform: translateX(110vw);
-    transform: translateX(110vw);
+    -webkit-transform: translateX(150vw);
+    -ms-transform: translateX(150vw);
+    transform: translateX(150vw);
   }
 `
 
