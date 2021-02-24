@@ -18,7 +18,12 @@ export const Container = styled.aside`
   justify-content: space-between;
   flex-direction: column;
   width: 410px;
-  height: 100%;
+  height: 92%;
+
+  @media only screen and (max-width: 1400px){
+    height: 100%;
+  }
+
 
   @media only screen and (max-width: 1170px){
     position: relative;

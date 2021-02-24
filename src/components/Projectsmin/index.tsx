@@ -2,7 +2,7 @@ import React, { useCallback, useState, useMemo } from 'react';
 import { motion } from "framer-motion";
 import AccessIcon from "../../assets/icons/access.svg";
 
-import Projets from  '../../data/Projects'
+import Projets from '../../data/Projects'
 
 import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data, Access } from './styles';
 
@@ -13,7 +13,7 @@ const Projectsmin: React.FC = () => {
   const [noProjectsSelected, setNoProjectsSelected] = useState<boolean>(true);
 
   const projectsSortByDate = useMemo(() => {
-    return Projets.slice().sort((a, b) =>  b.date.getTime() - a.date.getTime())
+    return Projets.slice().sort((a, b) => b.date.getTime() - a.date.getTime())
   }, [])
 
 
@@ -29,15 +29,15 @@ const Projectsmin: React.FC = () => {
   }, []);
 
   const transformFormatDate = useCallback((date: Date): string => {
-      const [, month, day, year] = date.toDateString().split(' ');
+    const [, month, day, year] = date.toDateString().split(' ');
 
-      return `${month} ${day}, ${year}`
+    return `${month} ${day}, ${year}`
   }, [])
 
   return (
     <Container>
 
-      {projectsSortByDate.map(({ uptitle, title, local, date, tags, link,linkLabel }, i) => (
+      {projectsSortByDate.map(({ uptitle, title, local, date, tags, links }, i) => (
         <motion.div
           whileHover={window.innerWidth > 1170 ? { scale: 1.1 } : { scale: 1 }}
           key={i}
@@ -49,7 +49,7 @@ const Projectsmin: React.FC = () => {
           }}>
             <UpTitle>{uptitle.toUpperCase()}</UpTitle>
             <Local>{local}</Local>
-        <Data>{transformFormatDate(date)}</Data>
+            <Data>{transformFormatDate(date)}</Data>
             <TagsContainer key={i}>{tags.map((t, id) => (
               <Tag key={id}>{t}</Tag>
             ))}</TagsContainer>
@@ -58,10 +58,12 @@ const Projectsmin: React.FC = () => {
             </Title>
 
             <Access>
-                  <a href={link} rel="noopener noreferrer" target="_blank">
-                    <span>{linkLabel}</span>
-                    <img src={AccessIcon} alt="" />
-                  </a>
+              {links && links.map(l => (
+                <a href={l.url} rel="noopener noreferrer" target="_blank">
+                  <span>{l.name}</span>
+                  <img src={AccessIcon} alt="" />
+                </a>
+              ))}
             </Access>
 
           </Project>

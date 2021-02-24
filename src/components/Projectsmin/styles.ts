@@ -23,7 +23,7 @@ export const Project = styled.article`
   padding: 40px ;
   overflow: hidden;
   transition: 0.1s;
-  cursor: pointer;
+  cursor: default;
 
   @media only screen and (max-width: 1170px){
     width: auto;
@@ -85,10 +85,14 @@ export const Title = styled.h1`
 `
 
 export const Access = styled.div`
+  display: flex;
 
   position: absolute;
+
   bottom: 30px;
-  right: 35px;
+  left: 35px;
+
+  font-size: 14px;
 
   a {
     display: flex;
@@ -97,13 +101,18 @@ export const Access = styled.div`
     text-decoration: none;
     color: #fff;
 
+    &:first-of-type {
+      margin-right: 12px;
+    }
+
     span {
       margin-right: 10px;
     }
 
     img {
-      width: 18px;
+      width: 16px;
       margin-top: -4px;
+      opacity: 0.6;
     }
   }
 

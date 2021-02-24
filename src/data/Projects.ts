@@ -1,11 +1,15 @@
+interface ILinkProps {
+  url: string;
+  name: string;
+}
+
 interface IProject {
   title: string;
   uptitle: string;
   local: string;
   date: Date;
   tags: string[];
-  link: string;
-  linkLabel: string
+  links?: ILinkProps[];
 }
 
 
@@ -18,11 +22,19 @@ const Projects: IProject[] = [
     tags: [
       'ReactJS',
     ],
-    link: 'https://growth.sale',
-    linkLabel: 'Website'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/growth'
+      },
+      {
+        name: 'Website',
+        url: 'https://growth.sale'
+      }
+    ],
   },
   {
-    title: 'Spider-Man',
+    title: 'Frontweek',
     uptitle: 'Study Project',
     local: 'Sete Lagoas - Brazil',
     date: new Date(2021, 1, 11),
@@ -30,8 +42,16 @@ const Projects: IProject[] = [
       'HTML',
       'SASS',
     ],
-    link: 'https://heuristic-saha-7147d4.netlify.app/',
-    linkLabel: 'Website'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/frontweek'
+      },
+      {
+        name: 'Website',
+        url: 'https://heuristic-saha-7147d4.netlify.app/'
+      }
+    ],
   },
   {
     title: 'BrodTi',
@@ -43,8 +63,12 @@ const Projects: IProject[] = [
       'CSS',
       'JavaScript',
     ],
-    link: 'https://github.com/Igorryan/brodti',
-    linkLabel: 'GitHub'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/brodti'
+      },
+    ],
   },
   {
     title: 'API Net Promoter Score (NPS)',
@@ -55,8 +79,12 @@ const Projects: IProject[] = [
       'Node.js',
       'Docker',
     ],
-    link: 'https://github.com/Igorryan/nps-igti',
-    linkLabel: 'GitHub'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/nps-igti'
+      },
+    ],
   },
   {
     title: 'University Compartments',
@@ -67,8 +95,16 @@ const Projects: IProject[] = [
       'Javascript',
       'Firebase',
     ],
-    link: 'https://github.com/Igorryan/escaninhos-pucminas',
-    linkLabel: 'GitHub'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/escaninhos-pucminas'
+      },
+      {
+        name: 'Video',
+        url: 'https://www.youtube.com/watch?v=omsPSC1DbAI&feature=youtu.be&ab_channel=IgorRyan'
+      }
+    ],
   },
   {
     title: 'MyTipLife E-commerce',
@@ -78,21 +114,33 @@ const Projects: IProject[] = [
     tags: [
       'Next.js',
     ],
-    link: 'https://store.mytiplife.com/',
-    linkLabel: 'Application'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/mytiplife'
+      },
+      {
+        name: 'E-commerce',
+        url: 'https://store.mytiplife.com/'
+      }
+    ],
   },
   {
     title: 'Mayor Gandini23',
     uptitle: 'Freelancer',
     local: 'Vitória ─ Brazil',
-    date: new Date(2020, 7, 24),
+    date: new Date(2019, 7, 24),
     tags: [
       'HTML',
       'CSS',
       'JavaScript',
     ],
-    link: 'https://www.gandini23.com.br',
-    linkLabel: 'Website'
+    links: [
+      {
+        name: 'Website',
+        url: 'https://www.gandini23.com.br/'
+      },
+    ],
   },
   {
     title: 'GoStack',
@@ -103,8 +151,12 @@ const Projects: IProject[] = [
       'ReactJS | Native',
       'Node.js',
     ],
-    link: 'https://github.com/Igorryan/rocketseat-gostack',
-    linkLabel: 'GitHub'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/rocketseat-gostack'
+      },
+    ],
   },
   {
     title: 'GoBarber',
@@ -115,8 +167,12 @@ const Projects: IProject[] = [
       'ReactJS | Native',
       'Node.js',
     ],
-    link: 'https://github.com/Igorryan/gobarber',
-    linkLabel: 'GitHub'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/gobarber'
+      },
+    ],
   },
   {
     title: 'Clones',
@@ -127,8 +183,12 @@ const Projects: IProject[] = [
       'Sass',
       'React Native',
     ],
-    link: 'https://github.com/Igorryan/apps-clones',
-    linkLabel: 'GitHub'
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/apps-clones'
+      },
+    ],
   },
   {
     title: 'Exclusive E-commerce',
@@ -138,8 +198,12 @@ const Projects: IProject[] = [
     tags: [
       'UX | UI Design',
     ],
-    link: 'https://www.figma.com/file/0vaggidrXGW9T5bvgfmuq5/Exclusive-Web-Plataform?node-id=0%3A1',
-    linkLabel: 'Figma'
+    links: [
+      {
+        name: 'Figma',
+        url: 'https://www.figma.com/file/0vaggidrXGW9T5bvgfmuq5/Exclusive-Web-Plataform?node-id=0%3A1'
+      },
+    ],
   },
 ]
 
