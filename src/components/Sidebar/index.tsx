@@ -15,7 +15,7 @@ import ProfileAvatar from '../../assets/img/profile.jpeg';
 
 const Sidebar: React.FC = ({ children }) => {
   const contactContainerRef = useRef<HTMLDivElement>(null);
-  const [contactPositionScroll, setContactPositionScroll] = useState<boolean>();
+  const [contactPositionScroll, setContactPositionScroll] = useState<boolean>(false);
   const [seeItAll, setSeeItAll] = useState(false);
   const visibleSkillsQuantity = 5;
   const [distanceContact, setDistanceContact] = useState(0);
@@ -100,7 +100,7 @@ const Sidebar: React.FC = ({ children }) => {
       </InfoContainer>
       <div style={{ height: 68 }}>
 
-        <ContactContainer ref={contactContainerRef}>
+        <ContactContainer headerFixed={contactPositionScroll} ref={contactContainerRef}>
           <Link to="/"><img id="profileAvatar" src={ProfileAvatar} alt="" /></Link>
           <div>
             <Contact>

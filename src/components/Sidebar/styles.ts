@@ -1,4 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+interface ContactContainerProps {
+  headerFixed: boolean;
+}
 
 const rotateIn2Cw = keyframes`
   0% {
@@ -121,7 +125,7 @@ export const SkillsContainer = styled.div`
   }
 `
 
-export const ContactContainer = styled.div`
+export const ContactContainer = styled.div<ContactContainerProps>`
   display: flex;
   align-items: center;
   left: 0;
@@ -131,8 +135,11 @@ export const ContactContainer = styled.div`
 
   @media (max-width: 1395px){
       bottom:40px;
-      background: #151515;
-    }
+
+      ${props => props.headerFixed && css`
+        background: #202022;
+      `}
+  }
 
   div {
     display: flex;
