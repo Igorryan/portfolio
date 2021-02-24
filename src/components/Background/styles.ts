@@ -40,12 +40,15 @@ const comets = keyframes`
 `
 
 export const Wrapper = styled.div`
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  width: 2050px;
+  margin: 0 auto;
 
   .stars {
     position: absolute;
