@@ -65,7 +65,7 @@ const Sidebar: React.FC = () => {
 
         <Description>
           I’m a Software Engineer currently working as a Freelance.
-          I mostly do front-end development and I'm a <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS</a>, <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">Next.js</a> and <a href="https://reactnative.dev" rel="noopener noreferrer" target="_blank">CSS</a> nerd. I can't shut up about UI/UX, Graphic Design and motions.
+          I mostly do front-end development and I’m a <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS</a>, <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">Next.js</a> and <a href="https://reactnative.dev" rel="noopener noreferrer" target="_blank">CSS</a> nerd. I can’t shut up about UI/UX, Graphic Design and motions.
         </Description>
 
         <SkillsContainer>
