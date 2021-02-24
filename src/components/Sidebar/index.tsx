@@ -13,7 +13,7 @@ import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import AccessIcon from "../../assets/icons/access.svg";
 import ProfileAvatar from '../../assets/img/profile.jpeg';
 
-const Sidebar: React.FC = ({ children }) => {
+const Sidebar: React.FC = () => {
   const contactContainerRef = useRef<HTMLDivElement>(null);
   const [contactPositionScroll, setContactPositionScroll] = useState<boolean>(false);
   const [seeItAll, setSeeItAll] = useState(false);
@@ -64,7 +64,8 @@ const Sidebar: React.FC = ({ children }) => {
         <Title>Hi, I’m Igor Ryan.</Title>
 
         <Description>
-          {children}
+          I’m a Software Engineer currently working as a Freelance.
+          I mostly do front-end development and I'm a <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS</a>, <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">Next.js</a> and <a href="https://reactnative.dev" rel="noopener noreferrer" target="_blank">CSS</a> nerd. I can't shut up about UI/UX, Graphic Design and motions.
         </Description>
 
         <SkillsContainer>
