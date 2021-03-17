@@ -9,11 +9,13 @@ import {
 import GlobalStyles from './styles/global';
 
 import Home from "./pages/Home";
+import Loading from "./components/Loading"
 
 function App() {
   return (
     <Router>
       <GlobalStyles />
+      <Loading />
       <Switch>
         <Route path="/" exact>
           <Home></Home>
