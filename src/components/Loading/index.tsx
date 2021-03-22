@@ -16,7 +16,7 @@ const Loading: React.FC = () => {
   return (
     <S.Wrapper className="loading" out={!loading}>
       <img src={Image} alt="assign"/>
-      <video playsInline autoPlay muted>
+      <video onEnded={() => setLoading(false)} playsInline autoPlay muted>
         <source src={Video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
