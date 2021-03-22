@@ -4,18 +4,6 @@ interface Props {
   out?: boolean
 }
 
-const opacityIn = keyframes`
-    0% {
-      transform: scale(0.9);
-      opacity: 0
-    }
-
-    100% {
-      transform: scale(1);
-      opacity: 1
-    }
-`
-
 const pulseAndOut = keyframes`
     0% {
       transform: scale(1);
@@ -60,28 +48,12 @@ export const Wrapper = styled.div<Props>`
   overflow: hidden;
 
   img {
-    position: absolute;
-
-    width: 300px;
-
-    opacity: 0;
-    z-index: 2;
-
-    animation: ${opacityIn} 0.6s ease both;
-    animation-delay: 0.4s;
-  }
-
-  video {
     width: 400px;
-    height: 400px;
     z-index: 3;
   }
 
   @media (max-width: 768px) {
     img {
-      width: 200px;
-    }
-    video {
       width: 200px;
     }
   }
@@ -91,12 +63,9 @@ export const Wrapper = styled.div<Props>`
     animation-delay: 0.85s;
 
     img {
-      animation: ${pulseAndOut} 0.6s ease both;
+      animation: ${pulseAndOut} 0.8s ease both;
     }
 
-    video {
-      animation: ${pulseAndOut} .8s ease both;
-    }
   `}
 `
 
