@@ -43,7 +43,7 @@ const Projectsmin: React.FC = () => {
           key={i}
         >
           <Project onMouseLeave={handleDeselectedProject} onMouseEnter={() => handleSelectedProject(i)} style={{
-            opacity: (focus === i && projectSelected) || noProjectsSelected ? 1 : 0.6,
+            opacity: window.innerWidth > 1170 ? ((focus === i && projectSelected) || noProjectsSelected ? 1 : 0.6) : 1,
             marginTop: i % 2 !== 0 && window.innerWidth > 1170 ? 25 : 0,
             marginBottom: i % 2 !== 0 && window.innerWidth > 1170 ? -16 : 0,
           }}>
