@@ -34,13 +34,44 @@ const Projects: IProject[] = [
     ],
   },
   {
+    title: 'Cozinha Fitness',
+    uptitle: 'Freelancer',
+    local: 'Sete Lagoas - Brazil',
+    date: new Date(2021, 6, 28),
+    tags: [
+      'UI/UX'
+    ],
+    links: [
+      {
+        name: 'Figma',
+        url: 'https://www.figma.com/file/SEB18kfCRyrWFzrZ1ZqEVG/Cozinha-Fitness?node-id=0%3A1'
+      }
+    ],
+  },
+  {
+    title: 'Arena Trade',
+    uptitle: 'Nick Builder',
+    local: 'Belo Horizonte - Brazil',
+    date: new Date(2021, 6, 22),
+    tags: [
+      'UI/UX',
+      'Angular'
+    ],
+    links: [
+      {
+        name: 'Figma',
+        url: 'https://www.figma.com/file/oQIT9vq54TBD35zUjwSVl2/Arena-Trade?node-id=0%3A1'
+      }
+    ],
+  },
+  {
     title: 'Frontweek',
     uptitle: 'Study Project',
     local: 'Sete Lagoas - Brazil',
     date: new Date(2021, 1, 11),
     tags: [
-      'HTML',
       'SASS',
+      'Web'
     ],
     links: [
       {
@@ -126,23 +157,6 @@ const Projects: IProject[] = [
     ],
   },
   {
-    title: 'Mayor Gandini23',
-    uptitle: 'Freelancer',
-    local: 'Vitória ─ Brazil',
-    date: new Date(2019, 7, 24),
-    tags: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-    ],
-    links: [
-      {
-        name: 'Website',
-        url: 'https://www.gandini23.com.br/'
-      },
-    ],
-  },
-  {
     title: 'GoStack',
     uptitle: 'Study Projects',
     local: 'Belo Horizonte - Brazil',
@@ -196,7 +210,7 @@ const Projects: IProject[] = [
     local: 'Sete Lagoas - Brazil',
     date: new Date(2020, 4, 6),
     tags: [
-      'UX | UI Design',
+      'UX/UX',
     ],
     links: [
       {
