@@ -62,10 +62,10 @@ const Sidebar: React.FC = () => {
 
       <InfoContainer>
         <Title>Hi, I’m Igor Ryan.</Title>
-
         <Description>
-          I’m a Software Engineer currently working as a Freelance.
-          I mostly do front-end development and I’m a <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS</a>, <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">Next.js</a> and <a href="https://reactnative.dev" rel="noopener noreferrer" target="_blank">CSS</a> nerd. I can’t shut up about UI/UX, Graphic Design and motions.
+        I'm a Software Engineer and currently work as a Front-end Engineer at <a href="https://www.linkedin.com/company/nickbuilder/mycompany/" rel="noopener noreferrer" target="_blank">Nick Builder</a>.
+        I walk between design and front-end development,
+        I'm a <a href="https://pt-br.reactjs.org/" rel="noopener noreferrer" target="_blank">ReactJS</a>, <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">Next.js</a> and <a href="https://reactnative.dev" rel="noopener noreferrer" target="_blank">CSS</a> nerd. I can’t shut up about UI/UX, Graphic Design and motions.
         </Description>
 
         <SkillsContainer>

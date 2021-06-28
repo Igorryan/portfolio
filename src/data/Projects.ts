@@ -85,6 +85,22 @@ const Projects: IProject[] = [
     ],
   },
   {
+    title: 'GiftCards Restaurants',
+    uptitle: 'Freelancer',
+    local: 'Sete Lagoas - Brazil',
+    date: new Date(2020, 12, 18),
+    tags: [
+      'PHP',
+      'JQuery'
+    ],
+    links: [
+      {
+        name: 'Website',
+        url: 'https://www.mytiplife.com/marketplace'
+      }
+    ],
+  },
+  {
     title: 'BrodTi',
     uptitle: 'Freelancer',
     local: 'San Francisco ─ California',
