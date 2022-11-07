@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useMemo } from 'react';
 import { motion } from "framer-motion";
 import AccessIcon from "../../assets/icons/access.svg";
 
@@ -13,9 +13,9 @@ const Projectsmin: React.FC = () => {
   const [noProjectsSelected, setNoProjectsSelected] = useState<boolean>(true);
   const [projectOnFocus, setProjectOnFocus] = useState<number>(-1)
 
-  // const projectsSortByDate = useMemo(() => {
-  //   return Projets.slice().sort((a, b) => b.date.getTime() - a.date.getTime())
-  // }, [])
+  const projectsSortByDate = useMemo(() => {
+    return Projets.slice().sort((a, b) => b.date.getTime() - a.date.getTime())
+  }, [])
 
   const handleSelectedProject = useCallback((id: number) => {
     setFocus(id);
@@ -46,7 +46,7 @@ const Projectsmin: React.FC = () => {
   return (
     <Container>
 
-      {Projets.map(({ uptitle, title, local, date, tags, links, preview }, i) => (
+      {projectsSortByDate.map(({ uptitle, title, local, date, tags, links, preview }, i) => (
         <motion.div
           onMouseEnter={() => handleProjectOnFocus(i)}
           onMouseLeave={() => setProjectOnFocus(-1)}

@@ -3,6 +3,10 @@ import BrodtiMovie from '../assets/videos/brodti.mp4';
 import GrowthMovie from '../assets/videos/growth.mp4';
 import MyTipLifeMovie from '../assets/videos/mytiplifestore.mp4';
 import PucMinasMovie from '../assets/videos/pucminas.mp4';
+import PicPayMovie from '../assets/videos/picpay.mp4';
+import TwitterMovie from '../assets/videos/twitter.mp4';
+import GoBarberMovie from '../assets/videos/gobarber.mp4';
+import SpiderManMovie from '../assets/videos/spiderman.mp4';
 
 interface ILinkProps {
   url: string;
@@ -14,7 +18,7 @@ interface IProject {
   uptitle: string;
   local: string;
   date: Date;
-  preview: string;
+  preview?: string;
   tags: string[];
   links?: ILinkProps[];
 }
@@ -73,6 +77,10 @@ const Projects: IProject[] = [
     ],
     links: [
       {
+        name: 'Website',
+        url: 'https://brodti.netlify.app/'
+      },
+      {
         name: 'GitHub',
         url: 'https://github.com/Igorryan/brodti'
       },
@@ -115,6 +123,92 @@ const Projects: IProject[] = [
       },
     ],
   },
+    {
+    title: 'PicPay Clone',
+    uptitle: 'Study Project',
+    local: 'Sete Lagoas - Brazil',
+    preview: PicPayMovie,
+    date: new Date(2020, 6, 13),
+    tags: [
+      'React Native',
+    ],
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/apps-clones'
+      },
+    ],
+  },
+  {
+    title: 'Twitter Web Clone',
+    uptitle: 'Study Project',
+    local: 'Sete Lagoas - Brazil',
+    preview: TwitterMovie,
+    date: new Date(2020, 6, 19),
+    tags: [
+      'React.JS',
+    ],
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/apps-clones'
+      },
+    ],
+  },
+
+    {
+    title: 'GoBarber',
+    uptitle: 'Rocketseat',
+    local: 'Belo Horizonte - Brazil',
+    date: new Date(2020, 6, 8),
+    preview: GoBarberMovie,
+    tags: [
+      'ReactJS | Native',
+      'Node.js',
+    ],
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/gobarber'
+      },
+    ],
+  },
+  {
+    title: 'Spiderman',
+    uptitle: 'Study Project',
+    local: 'Sete Lagoas - Brazil',
+    preview: SpiderManMovie,
+    date: new Date(2021, 1, 11),
+    tags: [
+      'SASS',
+    ],
+    links: [
+      {
+        name: 'Website',
+        url: 'https://spidermanpreview.netlify.app'
+      },
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/frontweek'
+      },
+    ],
+  },
+    {
+    title: 'API Net Promoter Score (NPS)',
+    uptitle: 'XPE',
+    local: 'Belo Horizonte ─ Brazil',
+    date: new Date(2020, 3, 14),
+    tags: [
+      'Node.js',
+      'Docker',
+    ],
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/Igorryan/nps-igti'
+      },
+    ],
+  },
   // {
   //   title: 'Cozinha Fitness',
   //   uptitle: 'Freelancer',
@@ -146,26 +240,7 @@ const Projects: IProject[] = [
   //     }
   //   ],
   // },
-  // {
-  //   title: 'Frontweek',
-  //   uptitle: 'Study Project',
-  //   local: 'Sete Lagoas - Brazil',
-  //   date: new Date(2021, 1, 11),
-  //   tags: [
-  //     'SASS',
-  //     'Web'
-  //   ],
-  //   links: [
-  //     {
-  //       name: 'GitHub',
-  //       url: 'https://github.com/Igorryan/frontweek'
-  //     },
-  //     {
-  //       name: 'Website',
-  //       url: 'https://heuristic-saha-7147d4.netlify.app/'
-  //     }
-  //   ],
-  // },
+
   // {
   //   title: 'GiftCards Restaurants',
   //   uptitle: 'Freelancer',
