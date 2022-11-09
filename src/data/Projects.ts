@@ -241,7 +241,7 @@ const Projects: IProject[] = [
     links: [
       {
         name: 'Figma',
-        url: 'https://www.figma.com/file/NRbVlPTzc30AMF4hFzHQ2L/Exclusive-E-Commerce?node-id=110%3A1284'
+        url: 'https://www.figma.com/file/v4cyual8tYxwbSAnTkrVs3/Y-Hotel?node-id=9%3A46'
       },
     ],
   },
