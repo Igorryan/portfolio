@@ -84,7 +84,7 @@ const Projectsmin: React.FC = () => {
               </>
             ) : (
               <PreviewWrapper>
-                <video id={`vid-${i}`} controls={false} autoPlay loop muted playsInline width="328">
+                <video id={`vid-${i}`} controls={false} autoPlay preload loop muted playsInline width="328">
                   <source src={preview}
                     type="video/mp4" />
                 </video>
