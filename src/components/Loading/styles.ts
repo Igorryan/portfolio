@@ -41,7 +41,7 @@ export const Wrapper = styled.div<Props>`
   width: 100vw;
   height: 100vh;
 
-  background: #161416;
+  background: #141414;
   z-index: 3;
 
   transition: 1s ease;

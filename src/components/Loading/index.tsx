@@ -9,7 +9,7 @@ const Loading: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 6000)
+    }, 2800)
   }, [])
 
   return (

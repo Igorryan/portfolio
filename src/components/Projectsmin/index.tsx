@@ -4,7 +4,7 @@ import AccessIcon from "../../assets/icons/access.svg";
 
 import Projets from '../../data/Projects'
 
-import { Container, Project, Title, TitleAnimation, TagsContainer, Tag, UpTitle, Local, Data, Access } from './styles';
+import { Container, Project, Title, TagsContainer, Tag, UpTitle, Local, Data, Access, PreviewWrapper } from './styles';
 
 const Projectsmin: React.FC = () => {
 
@@ -50,7 +50,7 @@ const Projectsmin: React.FC = () => {
         <motion.div
           onMouseEnter={() => handleProjectOnFocus(i)}
           onMouseLeave={() => setProjectOnFocus(-1)}
-          whileHover={window.innerWidth > 1170 ? { scale: 1.1 } : { scale: 1 }}
+          whileHover={window.innerWidth > 1170 ? { scale: 1.1, zIndex: 1 } : { scale: 1 }}
           key={i}
         >
 
@@ -72,28 +72,38 @@ const Projectsmin: React.FC = () => {
                 <Title>
                   {title}
                 </Title>
+
+                <Access>
+                  {links && links.map(l => (
+                    <a href={l.url} rel="noopener noreferrer" target="_blank">
+                      <span>{l.name}</span>
+                      <img src={AccessIcon} alt="" />
+                    </a>
+                  ))}
+                </Access>
               </>
             ) : (
-              <>
-                <TitleAnimation>
-                  {title}
-                </TitleAnimation>
-
-                <video id={`vid-${i}`} style={{ marginTop: 30, marginBottom: 30 }} controls={false} autoPlay loop muted playsInline width="328">
+              <PreviewWrapper>
+                <video id={`vid-${i}`} controls={false} autoPlay loop muted playsInline width="328">
                   <source src={preview}
                     type="video/mp4" />
                 </video>
-              </>
-            )}
 
-            <Access>
-              {links && links.map(l => (
-                <a href={l.url} rel="noopener noreferrer" target="_blank">
-                  <span>{l.name}</span>
-                  <img src={AccessIcon} alt="" />
-                </a>
-              ))}
-            </Access>
+                <div>
+                  <h1>
+                    {title}
+                  </h1>
+
+
+                  {links && links.map(l => (
+                    <a href={l.url} rel="noopener noreferrer" target="_blank">
+                      <span>{l.name}</span>
+                      <img src={AccessIcon} alt="" />
+                    </a>
+                  ))}
+                </div>
+              </PreviewWrapper>
+            )}
           </Project>
 
 

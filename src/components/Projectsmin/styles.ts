@@ -59,7 +59,6 @@ export const Project = styled.article`
   margin-bottom: 8px;
   margin-left: 8px;
   background: #202022;
-  padding: 40px ;
   overflow: hidden;
   transition: 0.1s;
   cursor: default;
@@ -70,10 +69,57 @@ export const Project = styled.article`
     height: auto;
     margin: 5px 20px !important;
    }
+`
 
-   video {
+export const PreviewWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
+    flex: 1;
+
+    a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    animation: ${textFocusIn} 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    img {
+      width: 16px;
+      margin-top: -4px;
+      margin-left: 0.5rem;
+      opacity: 0.6;
+    }
+  }
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    animation: ${textFocusIn} 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+  video {
+    width: 100%;
+    padding: 10px 10px 0;
     animation: ${flipInHorBottom} 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.2s;
    }
 `
 
@@ -81,31 +127,34 @@ export const UpTitle = styled.p`
   font-weight: 900;
   font-size: 12px;
   letter-spacing: 0.2em;
+  padding: 40px 40px 0;
 `
 
 export const Local = styled.p`
   color: rgb(148, 148, 149);
   margin-top: 15px;
   font-size: 14px;
+  padding: 0px 40px 0;
 `
 
 export const Data = styled.p`
   color: rgb(148, 148, 149);
   margin-top: 3px;
   font-size: 14px;
-
+  padding: 0px 40px 0;
 `
+
 export const TagsContainer = styled.div`
   display: flex;
   align-items: center;
 
   margin-top: 40px;
   margin-bottom: 18px;
+  padding: 0px 40px 0;
 
   @media only screen and (max-width: 1170px){
     margin-top: 30px;
   }
-
 `
 
 export const Tag = styled.div`
@@ -126,26 +175,16 @@ export const Title = styled.h1`
   font-weight: 700;
   line-height: 1.3em;
   word-break: keep-all;
+  padding: 0px 40px 0;
   animation: ${fadeInTop} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-`
-
-export const TitleAnimation = styled.h1`
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.3em;
-  word-break: keep-all;
-  animation: ${textFocusIn} 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 `
 
 export const Access = styled.div`
   display: flex;
-
-  position: absolute;
-
-  bottom: 30px;
-  left: 40px;
-
   font-size: 14px;
+
+  padding-left: 40px;
+  margin-top: 60px;
 
   a {
     display: flex;

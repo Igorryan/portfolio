@@ -38,13 +38,13 @@ const Projects: IProject[] = [
     ],
     links: [
       {
-        name: 'Website',
+        name: 'Preview',
         url: 'https://signin-up-web-animation.netlify.app/'
       },
-      {
-        name: 'GitHub',
-        url: 'https://github.com/Igorryan/signin-up-web-animation'
-      }
+      // {
+      //   name: 'GitHub',
+      //   url: 'https://github.com/Igorryan/signin-up-web-animation'
+      // }
     ],
   },
   {
@@ -58,13 +58,13 @@ const Projects: IProject[] = [
     ],
     links: [
       {
-        name: 'Website',
+        name: 'Preview',
         url: 'https://growthspreview.netlify.app/'
       },
-      {
-        name: 'GitHub',
-        url: 'https://github.com/Igorryan/growth'
-      },
+      // {
+      //   name: 'GitHub',
+      //   url: 'https://github.com/Igorryan/growth'
+      // },
     ],
   },
   {
@@ -80,13 +80,13 @@ const Projects: IProject[] = [
     ],
     links: [
       {
-        name: 'Website',
+        name: 'Preview',
         url: 'https://brodti.netlify.app/'
       },
-      {
-        name: 'GitHub',
-        url: 'https://github.com/Igorryan/brodti'
-      },
+      // {
+      //   name: 'GitHub',
+      //   url: 'https://github.com/Igorryan/brodti'
+      // },
     ],
   },
   {
@@ -100,13 +100,13 @@ const Projects: IProject[] = [
     ],
     links: [
       {
-        name: 'E-commerce',
+        name: 'Preview',
         url: 'https://store.mytiplife.com/'
       },
-      {
-        name: 'GitHub',
-        url: 'https://github.com/Igorryan/mytiplife'
-      },
+      // {
+      //   name: 'GitHub',
+      //   url: 'https://github.com/Igorryan/mytiplife'
+      // },
     ],
   },
   {
@@ -187,13 +187,13 @@ const Projects: IProject[] = [
     ],
     links: [
       {
-        name: 'Website',
+        name: 'Preview',
         url: 'https://spidermanpreview.netlify.app'
       },
-      {
-        name: 'GitHub',
-        url: 'https://github.com/Igorryan/frontweek'
-      },
+      // {
+      //   name: 'GitHub',
+      //   url: 'https://github.com/Igorryan/frontweek'
+      // },
     ],
   },
   {
@@ -213,7 +213,7 @@ const Projects: IProject[] = [
     ],
   },
   {
-    title: 'Exclusive E-commerce',
+    title: 'Exclusive',
     uptitle: 'Freelancer',
     local: 'Sete Lagoas - Brazil',
     preview: ExclusiveMovie,
