@@ -4,7 +4,7 @@ import * as S from './styles';
 import Image from '../../assets/img/assign.gif'
 
 const Loading: React.FC = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
