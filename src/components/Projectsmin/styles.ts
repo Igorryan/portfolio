@@ -66,7 +66,6 @@ export const Project = styled.article`
   @media only screen and (max-width: 1170px){
     width: auto;
     min-height: 300px;
-    height: auto;
     margin: 5px 20px !important;
    }
 `
@@ -78,6 +77,10 @@ export const PreviewWrapper = styled.div`
   align-items: center;
 
   height: 100%;
+
+  @media only screen and (max-width: 1170px){
+    flex: 1;
+   }
 
   > div {
     display: flex;
@@ -104,6 +107,21 @@ export const PreviewWrapper = styled.div`
       opacity: 0.6;
     }
   }
+
+    @media only screen and (max-width: 1170px){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 100%;
+
+    a {
+      margin-top: 0
+    }
+   }
+
+
   }
 
   h1 {
@@ -185,6 +203,10 @@ export const Access = styled.div`
 
   padding-left: 40px;
   margin-top: 60px;
+
+  @media only screen and (max-width: 1170px){
+    margin-top: 70px;
+   }
 
   a {
     display: flex;
