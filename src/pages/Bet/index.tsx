@@ -47,7 +47,7 @@ const Home: React.FC = () => {
     const coverage = balance * 0.5 / 100
     const win = column - coverage
     const winZero = (coverage * 36) - column - coverage
-    const loss = column + coverage
+    const loss = column + column + coverage
 
     setTip({
       column,
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
     const coverage = balance * 1.5 / 100
     const win = column - coverage - tip.column - tip.coverage
     const winZero = (coverage * 36) - column - coverage - tip.column - tip.coverage
-    const loss = column + coverage + tip.column + tip.coverage
+    const loss = column + column + coverage + tip.column + tip.column + tip.coverage
 
     setGale({
       column,
