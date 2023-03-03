@@ -13,7 +13,7 @@ type TipProps = {
 }
 
 const Home: React.FC = () => {
-  const [balance, setBalance] = useState(100)
+  const [balance, setBalance] = useState(0)
   const [tip, setTip] = useState<TipProps>({
     column: 0,
     coverage: 0,
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
     loss: 0,
   })
 
-  const [history, setHistory] = useState<number[]>([1])
+  const [history, setHistory] = useState<number[]>([])
 
   useMemo(() => {
     if (balance === 0) {
