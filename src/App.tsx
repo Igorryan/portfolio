@@ -9,6 +9,7 @@ import {
 import GlobalStyles from './styles/global';
 
 import Home from "./pages/Home";
+import Bet from "./pages/Bet";
 import Loading from "./components/Loading"
 
 function App() {
@@ -18,7 +19,10 @@ function App() {
       <Loading />
       <Switch>
         <Route path="/" exact>
-          <Home></Home>
+          <Home/>
+        </Route>
+        <Route path="/bet" exact>
+          <Bet/>
         </Route>
       </Switch>
     </Router>
