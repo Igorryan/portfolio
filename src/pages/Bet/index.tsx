@@ -30,6 +30,7 @@ const Home: React.FC = () => {
   })
 
   const [history, setHistory] = useState<number[]>([])
+  const [tips, setTips] = useState<string[]>([])
 
   useMemo(() => {
     if (balance === 0) {
@@ -93,13 +94,47 @@ const Home: React.FC = () => {
     setHistory(oldValue => [column, ...oldValue])
   }, [])
 
+  const handleDeleteHistory = useCallback((columnIndex: number) => {
+    setHistory(oldValue => oldValue.filter((value, i) => i !== columnIndex))
+  }, [])
+
   function handleClearHistory(){
     setHistory([])
+  }
+
+  function handleAddTip(tip: string){
+    setTips(oldValue => [...oldValue, tip])
+  }
+
+  function handleDeleteTip(tipIndex: number){
+    setTips(oldValue => oldValue.filter((value, i) => i !== tipIndex))
   }
 
   return (
     <S.Container>
       <Background />
+      <S.AsideContainer>
+        <S.ButtonsContainer>
+          <button onClick={() => handleAddTip('✅')}>1ª aposta {"✅"}</button>
+          <button onClick={() => handleAddTip('✅ (Gale)')}>Gale {"✅"}</button>
+          <button onClick={() => handleAddTip('✅ (2º Gale)')}>2º Gale {"✅"}</button>
+          <button onClick={() => handleAddTip('✅ (3º Gale)')}>3º Gale {"✅"}</button>
+          <button onClick={() => handleAddTip('🔴')}>RED {"🔴"}</button>
+        </S.ButtonsContainer>
+
+        {tips.length !== 0 && (
+          <S.TipsContainer>
+          <p>Apostas</p>
+
+          <ul>
+            {tips.map((tip, i) => (
+              <li onClick={() => handleDeleteTip(i)}><span>{i+1}ª </span> <span role="img" arial-label="emoji" key={i}>{tip}</span></li>
+            ))}
+          </ul>
+        </S.TipsContainer>
+        )}
+
+      </S.AsideContainer>
       <S.ContentContainer>
         <h3>Playpix Roleta A</h3>
 
@@ -224,7 +259,7 @@ const Home: React.FC = () => {
           <p style={{ fontSize: 12, marginBottom: 8, cursor: 'pointer' }} onClick={handleClearHistory}>clear</p>
             <S.HistoryContainer>
               {history.map((column, i) => (
-                <S.ColumnRound key={i} column={column}>{column}</S.ColumnRound>
+                <S.ColumnRound key={i} column={column} onClick={() => handleDeleteHistory(i)}>{column}</S.ColumnRound>
               ))}
             </S.HistoryContainer>
 

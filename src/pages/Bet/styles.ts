@@ -8,7 +8,74 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding-bottom: 40px;
 `;
+
+export const AsideContainer = styled.div`
+ position: absolute;
+ left: 40px;
+ top: 40px;
+`
+
+export const ButtonsContainer = styled.div`
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6px;
+
+  button {
+    padding: 12px 10px;
+    border-radius: 6px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:nth-of-type(1) {
+      background: #00B75F;
+    }
+    &:nth-of-type(2) {
+      background: #00B75F;
+    }
+    &:nth-of-type(3) {
+      background: #00B75F;
+    }
+    &:nth-of-type(4) {
+      background: #00B75F;
+    }
+    &:nth-of-type(5) {
+      background: #CA0202;
+    }
+  }
+`
+
+export const TipsContainer = styled.div`
+  background: #1b1b1b;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+
+  p{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+
+
+    li {
+      display: flex;
+      align-items: center;
+      span:first-of-type {
+        width: 30px;
+        display: block;
+      }
+    }
+  }
+`
 
 export const ContentContainer = styled.div`
   text-align: center;
